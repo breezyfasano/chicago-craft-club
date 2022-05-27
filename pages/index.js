@@ -69,14 +69,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`${styles.section} container mt-5`}>
-        <div className="row justify-content-center">
-          <div className="col-12">
-            <h1>from the club</h1>
-          </div>
-        </div>
-      </section>
-
       <section className={`${styles.section} container mb-5`}>
         <div className="row justify-content-center">
           <div className="col-12 col-lg-8">
