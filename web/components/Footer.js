@@ -12,16 +12,16 @@ export default function Footer() {
           <div className="col-12 col-lg-6">
           <ul className="socialsList">
                 <li>
-                  <a href="https://www.facebook.com/groups/1233181850502151" target="_blank" rel="nofollow"><Image src="/icons/black/facebook-black.svg" width={30} height={30} alt="Facebook"></Image></a>
+                  <a href="https://www.facebook.com/groups/1233181850502151" target="_blank" rel="noreferrer"><Image src="/icons/black/facebook-black.svg" width={30} height={30} alt="Facebook"></Image></a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/chicagocraftingclub/" target="_blank" rel="nofollow"><Image src="/icons/black/instagram-black.svg" width={30} height={30} alt="Instagram"></Image></a>
+                  <a href="https://www.instagram.com/chicagocraftingclub/" target="_blank" rel="noreferrer"><Image src="/icons/black/instagram-black.svg" width={30} height={30} alt="Instagram"></Image></a>
                 </li>
                 <li>
-                  <a href="https://discord.gg/ekJwuzzF3T" target="_blank" rel="nofollow"><Image src="/icons/black/discord-black.svg" width={30} height={30} alt="Discord"></Image></a>
+                  <a href="https://discord.gg/ekJwuzzF3T" target="_blank" rel="noreferrer"><Image src="/icons/black/discord-black.svg" width={30} height={30} alt="Discord"></Image></a>
                 </li>
                 <li>
-                  <a href="https://www.tiktok.com/@chicagocraftclub" target="_blank" rel="nofollow"><Image src="/icons/black/tiktok-black.svg" width={30} height={30} alt="Tiktok"></Image></a>
+                  <a href="https://www.tiktok.com/@chicagocraftclub" target="_blank" rel="noreferrer"><Image src="/icons/black/tiktok-black.svg" width={30} height={30} alt="Tiktok"></Image></a>
                 </li>
               </ul>
           </div>

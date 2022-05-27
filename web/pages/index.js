@@ -52,16 +52,16 @@ export default function Home() {
             <div className="col-12 col-lg-8 d-flex justify-content-center mt-4">
               <ul className="socialsList">
                 <li>
-                  <a href="https://www.facebook.com/groups/1233181850502151" target="_blank" rel="nofollow"><Image src="/icons/facebook.svg" width={53} height={53} alt="Facebook"></Image></a>
+                  <a href="https://www.facebook.com/groups/1233181850502151" target="_blank" rel="noreferrer"><Image src="/icons/facebook.svg" width={53} height={53} alt="Facebook"></Image></a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/chicagocraftingclub/" target="_blank" rel="nofollow"><Image src="/icons/instagram.svg" width={53} height={53} alt="Instagram"></Image></a>
+                  <a href="https://www.instagram.com/chicagocraftingclub/" target="_blank" rel="noreferrer"><Image src="/icons/instagram.svg" width={53} height={53} alt="Instagram"></Image></a>
                 </li>
                 <li>
-                  <a href="https://discord.gg/ekJwuzzF3T" target="_blank" rel="nofollow"><Image src="/icons/discord.svg" width={53} height={53} alt="Discord"></Image></a>
+                  <a href="https://discord.gg/ekJwuzzF3T" target="_blank" rel="noreferrer"><Image src="/icons/discord.svg" width={53} height={53} alt="Discord"></Image></a>
                 </li>
                 <li>
-                  <a href="https://www.tiktok.com/@chicagocraftclub" target="_blank" rel="nofollow"><Image src="/icons/tiktok.svg" width={53} height={53} alt="Tiktok"></Image></a>
+                  <a href="https://www.tiktok.com/@chicagocraftclub" target="_blank" rel="noreferrer"><Image src="/icons/tiktok.svg" width={53} height={53} alt="Tiktok"></Image></a>
                 </li>
               </ul>
             </div>
