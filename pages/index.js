@@ -71,7 +71,7 @@ export default function Home() {
 
       <section className={`${styles.section} container mb-5`}>
         <div className="row justify-content-center">
-          <div className="col-12 col-lg-8">
+          <div className="col-12 col-lg-8 mt-5">
             <p className={styles.callout}>do you have an idea for an event? interested in volunteering? have a business inquiry?</p>
             <p className={styles.callout}>please contact us at <a href="mailto:chicagocraftingclub@gmail.com">chicagocrafting&#8203;club@gmail.com</a> </p>
           </div>
