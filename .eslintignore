@@ -1,0 +1,6 @@
+# Ignore directories
+.next
+public
+.husky
+package-lock.json
+*.scss
