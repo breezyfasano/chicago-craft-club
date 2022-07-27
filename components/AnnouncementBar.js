@@ -4,15 +4,16 @@ export default function AnnouncementBar() {
   return (
     <div className='bg-yellow text-center border-black border-solid border-t-4 border-b-4 px-0 py-2'>
       <p className='font-black text-md mb-0'>
-        Announcing our new Geneva community! Find friends and more.{' '}
+        The Bans Off Our Bodies craft fair for reproductive rights is on August
+        12!{' '}
         <a
-          href='https://links.geneva.com/invite/1c4aefe8-cc7a-4fc4-9a4c-44eefd4f57a0'
+          href='https://www.instagram.com/p/Cfwfdl_uDQl/'
           target='_blank'
           rel='noreferrer'
         >
-          Join here.
-        </a>{' '}
-        🌼
+          {' '}
+          More info.
+        </a>
       </p>
     </div>
   )
