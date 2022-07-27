@@ -17,7 +17,7 @@ export default function Layout({ children }) {
       </Head>
       <AnnouncementBar />
       {/* <Navbar /> */}
-      <main className='container-fluid m-0 p-0'>{children}</main>
+      <main className='m-0 p-0'>{children}</main>
       <Footer />
     </>
   )

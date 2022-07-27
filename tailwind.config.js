@@ -8,8 +8,8 @@ module.exports = {
       fontSize: {
         xxs: '0.875rem', //14px
         xs: '1rem', //16px
-        base: '1.05rem', //16.8px
         sm: '1.125rem', // 18px
+        base: '1.25rem', //20px
         md: '1.25rem', // 20px
         lg: '1.375rem', // 22px
         xl: '1.5rem', // 24px
@@ -23,6 +23,17 @@ module.exports = {
       },
       spacing: {
         30: '1.875rem', //30px,
+      },
+      colors: {
+        transparent: 'transparent',
+        blue: '#575CCE',
+        sky: '#ABAEFF',
+        pink: '#F0BBF3',
+        yellow: '#EDF53A',
+        beige: '#FEFFEA',
+        gray: '#1E1E1E',
+        black: '#000000',
+        white: '#FFFFFF',
       },
     },
     fontFamily: {

@@ -1,38 +1,32 @@
 // Imports
-@import 'variables';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-html,
-body {
-  background-color: $lightYellow;
-  padding: 0;
-  margin: 0;
-  @apply antialiased;
-}
 
 * {
   box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-// Announcement Bar
-.announcement-bar {
-  text-align: center;
-  background: $highlighter;
-  padding: 10px 0;
-  border-top: 5px solid #000000;
-  border-bottom: 5px solid #000000;
-  .announcement-bar-text {
-    margin-bottom: 0;
-    font-size: 20px;
-    font-weight: 900;
+@layer base {
+  html,
+  body {
+    @apply bg-beige antialiased m-0 p-0;
+  }
+  h1 {
+    @apply text-4xl font-extrabold mb-8 text-center;
+    font-family: 'Libre Franklin', sans-serif;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  p {
+    @apply font-sans text-base;
+  }
+  section {
+    @apply py-8 lg:py-16 px-5 lg:px-0;
+  }
+  .container {
+    @apply w-full lg:w-3/4 2xl:w-2/5;
   }
 }
 
@@ -41,42 +35,43 @@ a {
 a {
   text-decoration: underline;
   &:hover {
-    color: $darkBlue;
+    @apply text-blue;
   }
 }
 
-h1 {
-  font-family: 'Libre Franklin', sans-serif;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: $darkBlue;
+.logoContainer {
+  width: 500px;
+  padding: 3rem;
+  @media (min-width: 1200px) {
+    padding: 0;
+    width: auto;
+  }
 }
 
-p {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 1.3rem;
+.header {
+  @apply bg-center bg-no-repeat bg-cover flex items-center justify-center pt-12;
+  background-image: url('/header.svg');
+  @media (min-width: 992px) {
+    min-height: 30vw;
+    padding-top: 0;
+  }
+  @media (min-width: 1200px) {
+    min-height: 32vw;
+    padding-top: 0;
+  }
+}
+
+.join {
+  @apply bg-blue text-white w-full;
+  h1 {
+    @apply text-pink;
+  }
+}
+
+.callout {
+  @apply block font-semibold text-2xl text-center;
 }
 
 .socialsList {
-  li:not(:last-child) {
-    margin-right: 2rem;
-  }
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-// Footer
-footer {
-  font-weight: 700;
-  background-color: $highlighter;
-  padding: 2rem 0;
-  border-top: 5px solid #000000;
-  border-bottom: 5px solid #000000;
-  .socialsList {
-    margin-top: 1rem;
-  }
+  @apply flex list-none p-0 w-full mt-6 lg:mt-0 space-x-8 lg:space-x-5;
 }
