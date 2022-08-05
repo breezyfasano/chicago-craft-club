@@ -5,10 +5,10 @@ export default function Footer() {
   return (
     <footer className='bg-yellow border-black border-solid border-t-4 border-b-4 font-bold py-8 lg:py-8 px-5'>
       <div className='flex flex-wrap justify-between lg:w-3/4 2xl:w-2/5 mx-auto'>
-        <div className='w-full lg:w-1/2'>
+        <div className='w-full md:w-1/2'>
           Copyright Chicago Craft Club 2022. Website by Breezy Fasano.
         </div>
-        <div className='w-full lg:w-1/2 '>
+        <div className='w-full md:w-1/2 '>
           <ul className='socialsList justify-center lg:justify-end'>
             <li>
               <a

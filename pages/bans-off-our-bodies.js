@@ -1,7 +1,7 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import fsPromises from 'fs/promises'
 import path from 'path'
-
 import Layout from '../components/Layout'
 import VendorCard from '../components/VendorCard'
 
@@ -21,7 +21,7 @@ export default function BansOffOurBodies({ vendors }) {
         <p>{`With your help, we'll be throwing this event to benefit 2 organizations: The Chicago Abortion Fund and the Midwest Access Coalition!`}</p>
       </section>
       <section className='w-full'>
-        <h1 className='text-boobs-pink'>Event Information</h1>
+        <h1 className='text-boobs-hotpink'>Event Information</h1>
         <div className='container grid grid-cols-1 md:grid-cols-2 gap-10'>
           <div>
             <p className='font-bold'>
@@ -36,6 +36,16 @@ export default function BansOffOurBodies({ vendors }) {
               CRAFT VENDORS! RAFFLE BASKETS! FUN MUSIC!
             </p>
             {/* <p><strong>Parking Info:</strong> Tempor proident voluptate incididunt laborum.</p> */}
+            <div className='flex justify-center'>
+              <div className='space-x-4 mt-6'>
+                {/* <Link href="/">
+                  <a className="btn primary">Eventbrite</a>
+                </Link> */}
+                <Link href='/docs/bans-off-our-bodies-poster.pdf'>
+                  <a className='btn primary'>PDF Poster</a>
+                </Link>
+              </div>
+            </div>
           </div>
           <div>
             <iframe
@@ -45,14 +55,14 @@ export default function BansOffOurBodies({ vendors }) {
               allowFullScreen=''
               loading='lazy'
               referrerPolicy='no-referrer-when-downgrade'
-              className='max-w-full border-2 shadow-md'
+              className='max-w-full w-full border-2 shadow-md mx-auto'
             ></iframe>
           </div>
         </div>
       </section>
-      <section className='container'>
-        <h1 className='text-boobs-pink'>Vendors</h1>
-        <div className='container grid grid-cols-1 md:grid-cols-3 gap-8 '>
+      <section className='containerv flex flex-col justify-center'>
+        <h1 className='text-boobs-hotpink'>Vendors</h1>
+        <div className='container grid grid-cols-1 md:grid-cols-3 gap-8 mx-auto'>
           {vendors.map((vendor) => {
             return <VendorCard vendor={vendor} key={vendor.name} />
           })}

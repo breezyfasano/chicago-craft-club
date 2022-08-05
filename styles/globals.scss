@@ -25,6 +25,9 @@
   section {
     @apply py-8 lg:py-16 px-5 lg:px-0;
   }
+  .btn {
+    @apply inline-block text-base font-bold rounded-full text-white px-6 py-4 border-4 border-boobs-hotpink bg-boobs-hotpink  hover:bg-transparent hover:text-boobs-hotpink no-underline;
+  }
 }
 
 .container {
@@ -33,6 +36,7 @@
     margin-right: auto;
     margin-left: auto;
   }
+  @apply lg:px-16 md:max-w-full md:w-full lg:w-auto;
 }
 
 // Text
