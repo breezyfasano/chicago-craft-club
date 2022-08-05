@@ -44,7 +44,7 @@ export default function BansOffOurBodies({ vendors }) {
               height='450'
               allowFullScreen=''
               loading='lazy'
-              referrerpolicy='no-referrer-when-downgrade'
+              referrerPolicy='no-referrer-when-downgrade'
               className='max-w-full border-2 shadow-md'
             ></iframe>
           </div>

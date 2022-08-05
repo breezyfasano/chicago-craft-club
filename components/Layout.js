@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import AnnouncementBar from './AnnouncementBar'
 import Footer from './Footer'
 import Head from 'next/head'
+import Script from 'next/script'
 
 export default function Layout({ children }) {
   return (
@@ -19,6 +20,10 @@ export default function Layout({ children }) {
       <Navbar />
       <main className='m-0 p-0'>{children}</main>
       <Footer />
+      <Script
+        src='https://kit.fontawesome.com/486fda9fef.js'
+        crossOrigin='anonymous'
+      ></Script>
     </>
   )
 }
