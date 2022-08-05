@@ -3,7 +3,7 @@ import React from 'react'
 export default function AnnouncementBar() {
   return (
     <div className='bg-yellow text-center border-black border-solid border-t-4 border-b-4 px-0 py-2'>
-      <p className='font-black text-md mb-0'>
+      <span className='font-black text-md mb-0'>
         The Bans Off Our Bodies craft fair for reproductive rights is on August
         12!{' '}
         <a
@@ -14,7 +14,7 @@ export default function AnnouncementBar() {
           {' '}
           More info.
         </a>
-      </p>
+      </span>
     </div>
   )
 }

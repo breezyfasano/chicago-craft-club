@@ -34,6 +34,11 @@ module.exports = {
         gray: '#1E1E1E',
         black: '#000000',
         white: '#FFFFFF',
+        boobs: {
+          hotpink: '#ec2b68',
+          pink: '#e482b0',
+          purple: '#9c5f86',
+        },
       },
     },
     fontFamily: {

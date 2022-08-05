@@ -13,20 +13,25 @@
     @apply bg-beige antialiased m-0 p-0;
   }
   h1 {
-    @apply text-4xl font-extrabold mb-8 text-center;
+    @apply text-4xl font-extrabold mb-4 lg:mb-8 text-center;
     font-family: 'Libre Franklin', sans-serif;
   }
   h2 {
     @apply text-xl;
   }
   p {
-    @apply font-sans text-base;
+    @apply font-sans text-base pt-3;
   }
   section {
     @apply py-8 lg:py-16 px-5 lg:px-0;
   }
-  .container {
-    @apply w-full lg:w-3/4 2xl:w-2/5;
+}
+
+.container {
+  @media (min-width: 992px) {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
