@@ -35,12 +35,20 @@ export default function BansOffOurBodies({ vendors }) {
               <br />
               CRAFT VENDORS! RAFFLE BASKETS! FUN MUSIC!
             </p>
-            {/* <p><strong>Parking Info:</strong> Tempor proident voluptate incididunt laborum.</p> */}
+            <p>
+              <strong>Parking Info:</strong> There is street parking only,
+              located west of the building. Do not park in any lots; you will be
+              at risk of being towed.
+            </p>
+            <p>
+              <strong className='text-boobs-hotpink'>
+                COVID-19 Policy: Masks will be REQUIRED for this event, per
+                Second Shift venue policy and Chicago Craft Club indoor meetup
+                policy.
+              </strong>
+            </p>
             <div className='flex justify-center'>
               <div className='space-x-4 mt-6'>
-                {/* <Link href="/">
-                  <a className="btn primary">Eventbrite</a>
-                </Link> */}
                 <Link href='/docs/bans-off-our-bodies-poster.pdf'>
                   <a className='btn primary'>PDF Poster</a>
                 </Link>
