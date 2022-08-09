@@ -36,16 +36,19 @@ export default function BansOffOurBodies({ vendors }) {
               CRAFT VENDORS! RAFFLE BASKETS! FUN MUSIC!
             </p>
             <p>
-              <strong>Parking Info:</strong> There is street parking only,
-              located west of the building. Do not park in any lots; you will be
-              at risk of being towed.
+              <strong className='text-boobs-hotpink'>Parking Info:</strong>{' '}
+              There is street parking only, located west of the building. Do not
+              park in any lots; you will be at risk of being towed.
             </p>
             <p>
-              <strong className='text-boobs-hotpink'>
-                COVID-19 Policy: Masks will be REQUIRED for this event, per
-                Second Shift venue policy and Chicago Craft Club indoor meetup
-                policy.
-              </strong>
+              <strong className='text-boobs-hotpink'>COVID-19 Policy:</strong>{' '}
+              Masks will be REQUIRED for this event, per Second Shift venue
+              policy and Chicago Craft Club indoor meetup policy.
+            </p>
+            <p>
+              <strong className='text-boobs-hotpink'>Accessibility:</strong>{' '}
+              Traversal of 1 flight of stairs is required to get to the space,
+              and there is no elevator. The space is not wheelchair accessible.
             </p>
             <div className='flex justify-center'>
               <div className='space-x-4 mt-6'>
