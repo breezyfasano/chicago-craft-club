@@ -66,6 +66,20 @@ export default function Footer() {
                 ></Image>
               </a>
             </li>
+            <li>
+              <a
+                href='https://app.geneva.com/invite/3a4ab924-4f52-4b7a-b0d5-c234ba74ea39'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <Image
+                  src='/geneva-flower-vector-blk.svg'
+                  width={30}
+                  height={30}
+                  alt='Geneva'
+                ></Image>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
