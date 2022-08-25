@@ -146,9 +146,9 @@ export default function Home() {
             </p>
             <p>
               please contact us at{' '}
-              <a href='mailto:chicagocraftingclub@gmail.com'>
+              <a href='mailto:hello@chicagocraft.club'>
                 {' '}
-                chicagocrafting&#8203;club@gmail.com
+                hello@chicagocraft.club
               </a>
             </p>
           </div>

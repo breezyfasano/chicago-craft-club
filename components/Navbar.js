@@ -2,10 +2,7 @@ import Link from 'next/link'
 import { Disclosure, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Bans Off Our Bodies', href: '/bans-off-our-bodies' },
-]
+const navigation = [{ name: 'Home', href: '/' }]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
