@@ -28,6 +28,10 @@
   .btn {
     @apply inline-block text-base font-bold rounded-full text-white px-6 py-4 border-4 border-boobs-hotpink bg-boobs-hotpink  hover:bg-transparent hover:text-boobs-hotpink no-underline;
   }
+  ul,
+  ol {
+    @apply list-disc list-inside;
+  }
 }
 
 .container {
