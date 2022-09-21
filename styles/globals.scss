@@ -10,7 +10,7 @@
 @layer base {
   html,
   body {
-    @apply bg-beige antialiased m-0 p-0;
+    @apply bg-beige antialiased m-0 p-0 text-base;
   }
   h1 {
     @apply text-4xl font-extrabold mb-4 lg:mb-8 text-center;
@@ -45,6 +45,16 @@ a {
   text-decoration: underline;
   &:hover {
     @apply text-blue;
+  }
+}
+
+.button {
+  @apply bg-pink inline-block mx-auto py-4 px-8 rounded-full no-underline font-black hover:font-black;
+  box-shadow: 5px 5px 0px black;
+  border: 1px solid black;
+  &:active {
+    box-shadow: 0px 0px 0px black;
+    transform: translateY(5px);
   }
 }
 

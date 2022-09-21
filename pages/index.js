@@ -8,7 +8,7 @@ export default function Home() {
         <div>
           {/* fix this extra div shit it sucks */}
           <div className='w-full flex justify-center items-center pb-10 lg:pb-0'>
-            <div className='w-full md:w-2/3 max-w-xs lg:max-w-lg px-4'>
+            <div className='w-full md:w-2/3 max-w-sm px-4 '>
               <Image
                 src='/logo-web.svg'
                 width={450}
@@ -137,7 +137,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='callout'>
+      <section className='callout bg-pink'>
         <div className='flex flex-wrap justify-center'>
           <div className='w-full lg:w-2/3'>
             <p>

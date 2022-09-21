@@ -2,22 +2,25 @@ import Link from 'next/link'
 import { Disclosure, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-const navigation = [{ name: 'Home', href: '/' }]
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'Events', href: '/events' },
+]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Navbar() {
   return (
-    <Disclosure as='nav' className='bg-beige border-b-4'>
+    <Disclosure as='nav' className='bg-blue lg:py-2'>
       {({ open }) => (
         <>
           <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
             <div className='relative flex items-center justify-center h-16'>
               <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
                 {/* Mobile menu button*/}
-                <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-black hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black'>
+                <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
                   <span className='sr-only'>Open main menu</span>
                   {open ? (
                     <XIcon className='block h-6 w-6' aria-hidden='true' />
@@ -28,12 +31,12 @@ export default function Example() {
               </div>
               <div className='flex items-center justify-start sm:items-stretch sm:justify-start'>
                 <div className='hidden sm:block'>
-                  <div className='flex space-x-8'>
+                  <div className='flex space-x-14'>
                     {navigation.map((item) => (
                       <Link href={item.href} key={item.name}>
                         <a
                           className={classNames(
-                            'text-black text-lg font-bold hover:bg-gray-700 hover:text-blue'
+                            'text-white text-lg font-bold hover:text-pink no-underline lowercase'
                           )}
                         >
                           {item.name}
@@ -61,7 +64,7 @@ export default function Example() {
                     as='a'
                     href={item.href}
                     className={classNames(
-                      'block px-3 py-2 rounded-md text-md font-bold'
+                      'block text-white px-3 py-2 rounded-md text-md font-bold'
                     )}
                     aria-current={item.current ? 'page' : undefined}
                   >
