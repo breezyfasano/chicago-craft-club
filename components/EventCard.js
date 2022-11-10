@@ -5,12 +5,17 @@ export default function EventCard({ event }) {
     month: 'short',
     day: 'numeric',
   })
+
+  const prepareTime = Intl.DateTimeFormat('en', {
+    hour: 'numeric',
+    minute: 'numeric',
+  }).format(new Date(event.time))
   return (
     <article className='bg-white rounded-md border-black border shadow-lg p-6 flex flex-col'>
       <h2 className='font-black text-blue'>{event.title}</h2>
       <div className='eventInfo my-3'>
         <p className='font-bold text-blue '>{prepareDate}</p>
-        <p className='font-bold '>{event.time}</p>
+        <p className='font-bold '>{prepareTime}</p>
         <p>{event.description}</p>
       </div>
       <div className='text-center'>
