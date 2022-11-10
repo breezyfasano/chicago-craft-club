@@ -22,6 +22,7 @@ export async function getAllEvents() {
       return previousValue
     }, [])
   }
+  console.log(data.events)
 
   const formattedData = formatEventData(data.events)
   {
