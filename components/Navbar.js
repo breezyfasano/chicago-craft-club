@@ -5,6 +5,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Events', href: '/events' },
+  { name: 'Craft Cubby', href: '/craft-cubby' },
 ]
 
 function classNames(...classes) {
