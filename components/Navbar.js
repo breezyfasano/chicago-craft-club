@@ -33,14 +33,14 @@ export default function Navbar() {
                 <div className='hidden sm:block'>
                   <div className='flex space-x-14'>
                     {navigation.map((item) => (
-                      <Link href={item.href} key={item.name}>
-                        <a
-                          className={classNames(
-                            'text-white text-lg font-bold hover:text-pink no-underline lowercase'
-                          )}
-                        >
-                          {item.name}
-                        </a>
+                      <Link
+                        href={item.href}
+                        key={item.name}
+                        className={classNames(
+                          'text-white text-lg font-bold hover:text-pink no-underline lowercase'
+                        )}
+                      >
+                        {item.name}
                       </Link>
                     ))}
                   </div>
