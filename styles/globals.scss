@@ -12,17 +12,32 @@
 @layer base {
   html,
   body {
-    @apply bg-beige antialiased m-0 p-0 text-base font-medium;
+    @apply bg-beige antialiased m-0 p-0 font-medium;
   }
   h1 {
     @apply text-4xl font-extrabold mb-4 lg:mb-8 text-center;
     font-family: 'Libre Franklin', sans-serif;
   }
   h2 {
-    @apply text-xl;
+    @apply text-2xl;
   }
   p {
     @apply font-sans text-base pt-3;
+  }
+  span {
+    @apply text-base;
+  }
+  .textPage {
+    h2 {
+      @apply font-bold text-blue py-4;
+    }
+    h3 {
+      @apply font-bold text-blue pt-4 text-lg;
+    }
+    ul {
+      list-style-type: disc;
+      @apply lg:px-7 text-base;
+    }
   }
   section {
     @apply py-8 lg:py-16 px-5 lg:px-0;

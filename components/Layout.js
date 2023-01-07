@@ -5,7 +5,7 @@ import Footer from './Footer'
 import Head from 'next/head'
 import Script from 'next/script'
 
-export default function Layout({ children }) {
+export default function Layout({ children, pageClass }) {
   return (
     <>
       <Head>
@@ -18,7 +18,7 @@ export default function Layout({ children }) {
       </Head>
       <AnnouncementBar />
       <Navbar />
-      <main className='m-0 p-0'>{children}</main>
+      <main className={`m-0 p-0 ${pageClass}`}>{children}</main>
       <Footer />
       <Script
         src='https://kit.fontawesome.com/486fda9fef.js'
