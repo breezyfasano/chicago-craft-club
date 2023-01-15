@@ -70,7 +70,7 @@ export default function CraftCubby() {
           <p>If you need help, talk to Mary or Laura!</p>
         </div>
       </section>
-      <section className='container'>
+      <section className='container pb-0'>
         <h2>Making a Donation</h2>
         <p>
           You can drop off any donations on site at Second Shift! See our drop
@@ -87,7 +87,7 @@ export default function CraftCubby() {
           really appreciate your support!!
         </p>
 
-        <h3>Drop Off Hours</h3>
+        <h3 className='mt-4'>Drop Off Hours</h3>
         <p>Second Shift Business Hours; Monday through Friday, 9am to 4pm.</p>
         <p>
           If for any reason the door is locked, ring the doorbell and we will
@@ -101,7 +101,7 @@ export default function CraftCubby() {
           .
         </p>
 
-        <div className='my-4'>
+        <div className='mt-4'>
           <h3>Examples of items to donate</h3>
           <p>
             Do you have anything else you’d like to donate that doesn’t fit in
@@ -122,6 +122,61 @@ export default function CraftCubby() {
             <li>Anything else crafty and fun!</li>
           </ul>
         </div>
+      </section>
+
+      <section className='container pb-0'>
+        <h2>Browse the Craft Cubby</h2>
+        <h3 className='mb-4'>Browsing Hours</h3>
+        <ul>
+          <li>First & Third Fridays of every month, 9am to 4pm.</li>
+          <li>
+            If for any reason the door is locked, ring the doorbell and we will
+            let you in.
+          </li>
+          <li>
+            You can also browse during craft club events at Second Shift. Keep
+            an eye on our <Link href='/events'>Events page</Link> for a list of
+            our upcoming events.
+          </li>
+          <li>
+            Want more access to the cubby? Members of Second Shift coworking get
+            unlimited access to the Craft Cubby as a perk!{' '}
+            <Link href='https://secondshiftchicago.com/'>
+              View more info about Second Shift.
+            </Link>
+          </li>
+        </ul>
+      </section>
+
+      <section className='container'>
+        <h2>Frequently Asked Questions</h2>
+        <h3>What is the parking situation like?</h3>
+        <p>
+          It is street parking only. You can also park in the residential areas
+          to the West of Second Shift. Do NOT park in the lot next to Second
+          Shift, as you will be towed.
+        </p>
+        <h3>Can I really take anything? Even for a friend?</h3>
+        <p>
+          Of course! Please just only take what you or your friend need, and
+          please be conscious of other craft club members who use the cubby. We
+          want everyone to have the opportunity to take something they need.
+        </p>
+        <h3>How can I support the Craft Cubby?</h3>
+        <p>
+          Donate to our Ko-fi, buy something from our Amazon wishlist, or bring
+          in any supplies that you don’t need: new or used! Your support makes
+          it possible for us to provide so many more free supplies to our
+          community, so thank you SO much.
+        </p>
+        <h3>
+          How can I see what’s in the cubby before making my way out to Second
+          Shift?
+        </h3>
+        <p>
+          Join us on Geneva and check out the Craft Cubby channel to see the
+          latest updates on our inventory before each pick-up day.
+        </p>
       </section>
     </Layout>
   )

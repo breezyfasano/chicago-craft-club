@@ -58,7 +58,7 @@
 
 // Text
 
-a {
+p a:not(.nav-link) {
   text-decoration: underline;
   &:hover {
     @apply text-blue;

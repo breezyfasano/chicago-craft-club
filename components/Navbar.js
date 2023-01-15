@@ -32,19 +32,18 @@ export default function Navbar() {
               </div>
               <div className='flex items-center justify-start sm:items-stretch sm:justify-start'>
                 <div className='hidden sm:block'>
-                  <div className='flex space-x-14'>
+                  <ul className='flex space-x-14'>
                     {navigation.map((item) => (
-                      <Link
-                        href={item.href}
+                      <li
                         key={item.name}
-                        className={classNames(
-                          'text-white text-lg font-bold hover:text-pink no-underline lowercase'
-                        )}
+                        className='text-lg text-white font-bold hover:text-pink no-underline lowercase'
                       >
-                        {item.name}
-                      </Link>
+                        <Link href={item.href} className='nav-link'>
+                          {item.name}
+                        </Link>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
             </div>
