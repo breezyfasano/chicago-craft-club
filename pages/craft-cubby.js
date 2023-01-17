@@ -8,7 +8,7 @@ export default function CraftCubby() {
     <Layout pageClass={'textPage'}>
       <PageHeader text='the Craft Cubby' />
       <section className='container flex justify-center pb-0'>
-      <Image src="/public/img/IMG_6612.JPG" width={616} height={462} alt="" className="block mx-auto" />
+      <Image src="/img/IMG_6612.JPG" width={616} height={462} alt="" className="block mx-auto" />
         <p>
           The Craft Cubby is our own take on the Little Free Library! Located at
           Second Shift in Logan Square, we have a craft supply stash that is
