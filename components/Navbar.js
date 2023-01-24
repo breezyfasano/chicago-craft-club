@@ -36,11 +36,9 @@ export default function Navbar() {
                     {navigation.map((item) => (
                       <li
                         key={item.name}
-                        className='text-lg text-white font-bold hover:text-pink no-underline lowercase'
+                        className='text-lg text-white font-bold hover:text-pink no-underline lowercase nav-link'
                       >
-                        <Link href={item.href} className='nav-link'>
-                          {item.name}
-                        </Link>
+                        <Link href={item.href}>{item.name}</Link>
                       </li>
                     ))}
                   </ul>

@@ -58,9 +58,11 @@
 
 // Text
 
-p a:not(.nav-link) {
+p a,
+li:not(.nav-link) a {
   text-decoration: underline;
-  &:hover {
+  cursor: pointer;
+  &:not(.nav-link):hover {
     @apply text-blue;
   }
 }

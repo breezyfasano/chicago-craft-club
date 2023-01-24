@@ -7,8 +7,7 @@ export default function CraftCubby() {
   return (
     <Layout pageClass={'textPage'}>
       <PageHeader text='the Craft Cubby' />
-      <section className='container flex justify-center pb-0'>
-      <Image src="/img/IMG_6612.JPG" width={616} height={462} alt="" className="block mx-auto" />
+      <section className='container flex pb-0 mb-10'>
         <p>
           The Craft Cubby is our own take on the Little Free Library! Located at
           Second Shift in Logan Square, we have a craft supply stash that is
@@ -18,6 +17,17 @@ export default function CraftCubby() {
           all of the new supplies? Come browse the free supply stash!
         </p>
       </section>
+      <div className='w-full flex justify-center'>
+        <div className='w-full md:w-1/4'>
+          <Image
+            src='/img/IMG_6612.JPG'
+            width={616}
+            height={462}
+            alt=''
+            className='block mx-auto'
+          />
+        </div>
+      </div>
       <section className='container pb-0'>
         <h2>Rules and Terms</h2>
         <ul>
@@ -50,7 +60,7 @@ export default function CraftCubby() {
         </ul>
       </section>
       <section className='container flex w-full pb-0'>
-        <div className='w-full lg:w-1/3'>
+        <div className='w-full'>
           <address className='not-italic'>
             <span className='block'>
               <strong>Second Shift Chicago</strong>
@@ -61,9 +71,7 @@ export default function CraftCubby() {
             <span className='block'>3432 W Diversey Ave, floor 2</span>
             <span className='block'>Chicago, IL 60647</span>
           </address>
-        </div>
-        <div className='w-full lg:w-2/3'>
-          <p>
+          <p className='mt-5'>
             When you walk in to the Second Shift building, go down the hall, up
             the stairs, into the door on the right. The Craft Cubby will be
             immediately to your left.
@@ -83,9 +91,11 @@ export default function CraftCubby() {
           <a href='tel:7736986142'>(773)-698-6142</a> or email us beforehand.
         </p>
         <p>
-          If you prefer to make a direct donation of new supplies, please check
-          out our Amazon wishlist or consider donating to our Ko-fi. We really,
-          really appreciate your support!!
+          If you prefer to make a direct donation of new supplies, please
+          consider donating to our{' '}
+          <Link href='https://ko-fi.com/chicagocraftclub'>Ko-fi</Link>. An
+          Amazon wishlist is coming soon! We really, really appreciate your
+          support!!
         </p>
 
         <h3 className='mt-4'>Drop Off Hours</h3>
@@ -177,6 +187,15 @@ export default function CraftCubby() {
         <p>
           Join us on Geneva and check out the Craft Cubby channel to see the
           latest updates on our inventory before each pick-up day.
+        </p>
+        <h3>I need an accessibility accommodation - is this possible?</h3>
+        <p>
+          Of course! Please email us at{' '}
+          <a href='mailto:craftcubby@chicagocraft.club'>
+            craftcubby@chicagocraft.club
+          </a>{' '}
+          and we will definitely work something out, so you can browse and/or
+          donate.
         </p>
       </section>
     </Layout>
