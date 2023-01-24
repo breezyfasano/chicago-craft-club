@@ -5,6 +5,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Events', href: '/events' },
+  { name: 'Craft Cubby', href: '/craft-cubby' },
 ]
 
 function classNames(...classes) {
@@ -31,19 +32,16 @@ export default function Navbar() {
               </div>
               <div className='flex items-center justify-start sm:items-stretch sm:justify-start'>
                 <div className='hidden sm:block'>
-                  <div className='flex space-x-14'>
+                  <ul className='flex space-x-14'>
                     {navigation.map((item) => (
-                      <Link href={item.href} key={item.name}>
-                        <a
-                          className={classNames(
-                            'text-white text-lg font-bold hover:text-pink no-underline lowercase'
-                          )}
-                        >
-                          {item.name}
-                        </a>
-                      </Link>
+                      <li
+                        key={item.name}
+                        className='text-lg text-white font-bold hover:text-pink no-underline lowercase nav-link'
+                      >
+                        <Link href={item.href}>{item.name}</Link>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
             </div>
