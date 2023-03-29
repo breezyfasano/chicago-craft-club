@@ -2,6 +2,10 @@
 
 const path = require('path')
 
+const withTM = require('next-transpile-modules')([
+  '@ericz1803/react-google-calendar',
+])
+
 const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
@@ -9,4 +13,6 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = withTM({
+  nextConfig,
+})
