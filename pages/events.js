@@ -39,7 +39,32 @@ export default function Events({ events }) {
       <PageHeader text='Our Events' />
 
       <section className='container flex flex-col justify-center'>
-        <div>
+        <div className='w-full lg:w-3/4 lg:mx-auto'>
+          <p>
+            Below, you can see a calendar of our events along with some other
+            fun events around Chicago. 💞
+          </p>
+          <p>
+            The calendar events with the blue color code and calendar name
+            &quot;Official Events&quot; are organized and ran by our awesome
+            volunteer staff. Then there are the yellow color coded events with
+            the calendar name &quot;Crafty Fun Around Chicago&quot;, which are
+            just some extra fun things we&apos;ve found around the city that may
+            interest you - these events are not organized by us directly.
+          </p>
+          <p>
+            You can also join our{' '}
+            <Link
+              href='https://app.geneva.com/invite/3a4ab924-4f52-4b7a-b0d5-c234ba74ea39'
+              className='link'
+            >
+              Geneva chatroom
+            </Link>{' '}
+            to see any community ran events! You can even host your own meetup
+            or one-off event there. 👀
+          </p>
+        </div>
+        <div className='mt-10'>
           <Calendar apiKey={API_KEY} calendars={calendars} styles={styles} />
         </div>
       </section>
