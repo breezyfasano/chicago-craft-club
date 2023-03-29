@@ -53,7 +53,7 @@ export default function Events({ events }) {
             interest you - these events are not organized by us directly.
           </p>
           <p>
-            You can also join our{' '}
+            Join our{' '}
             <Link
               href='https://app.geneva.com/invite/3a4ab924-4f52-4b7a-b0d5-c234ba74ea39'
               className='link'
