@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Layout from '../components/Layout'
 import EventCard from '../components/EventCard'
 import { getAllEvents } from '../library/api'
@@ -8,10 +9,13 @@ import { css } from '@emotion/react'
 
 const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_CAL_API_TOKEN
 let calendars = [
-  { calendarId: process.env.NEXT_PUBLIC_OFFICIAL_EVENT_CAL_ID },
+  {
+    calendarId: process.env.NEXT_PUBLIC_OFFICIAL_EVENT_CAL_ID,
+    color: '#575CCE',
+  },
   {
     calendarId: process.env.NEXT_PUBLIC_CRAFTY_FUN_CAL_ID,
-    color: '#B241D1', //optional, specify color of calendar 2 events
+    color: '#EDF53A', //optional, specify color of calendar 2 events
   },
 ]
 
@@ -20,7 +24,7 @@ let styles = {
   calendar: css`
     background-color: #fff;
     .calendar-title {
-      color: red;
+      color: #575cce;
       font-weight: bold;
     }
     .calendar-footer {
@@ -35,24 +39,36 @@ export default function Events({ events }) {
       <PageHeader text='Our Events' />
 
       <section className='container flex flex-col justify-center'>
-        <h2 className='font-bold text-center mb-4'>Calendar</h2>
         <div>
           <Calendar apiKey={API_KEY} calendars={calendars} styles={styles} />
         </div>
       </section>
 
       <section className='container flex flex-col justify-center'>
-        <h2 className='font-bold text-center'>Upcoming Official Events</h2>
-        <div className='grid grid-cols-1 gap-10 py-4 lg:w-1/2 '>
+        <h2 className='font-bold text-center text-blue'>
+          Upcoming Official Events
+        </h2>
+        <div className='grid grid-cols-1 gap-6 py-4 lg:grid-cols-3'>
           {events.length ? (
             events.map((event, index) => (
               <EventCard event={event} key={index} />
             ))
           ) : (
-            <strong className='text-2xl'>
-              Sorry, there are no events scheduled at this time. Check back
-              soon, and join the Geneva group for community events!
-            </strong>
+            <div className='col-span-3'>
+              <p className='text-lg text-center'>
+                Sorry, there are no events scheduled at this time.
+              </p>
+              <p className='text-lg text-center'>
+                Check back soon, and join the{' '}
+                <Link
+                  href='https://app.geneva.com/invite/3a4ab924-4f52-4b7a-b0d5-c234ba74ea39'
+                  className='link'
+                >
+                  Geneva group
+                </Link>{' '}
+                for community events!
+              </p>
+            </div>
           )}
         </div>
       </section>
@@ -62,6 +78,8 @@ export default function Events({ events }) {
 
 export async function getStaticProps() {
   const data = await getAllEvents()
+  // const data = EventData;
+
   return {
     props: {
       events: data,

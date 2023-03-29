@@ -11,7 +11,7 @@ export default function EventCard({ event }) {
     minute: 'numeric',
   }).format(new Date(event.time))
   return (
-    <article className='bg-white rounded-md border-black border shadow-lg p-6 flex flex-col'>
+    <article className='bg-white rounded-md border-black border shadow-lg p-6 flex flex-col justify-between'>
       <h2 className='font-black text-blue'>{event.title}</h2>
       <div className='eventInfo my-3'>
         <p className='font-bold text-blue '>{prepareDate}</p>
