@@ -4,34 +4,9 @@ import Layout from '../components/Layout'
 import EventCard from '../components/EventCard'
 import { getAllEvents } from '../library/api'
 import PageHeader from '../components/PageHeader'
-import Calendar from '@ericz1803/react-google-calendar'
 import { css } from '@emotion/react'
 
-const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_CAL_API_TOKEN
-let calendars = [
-  {
-    calendarId: process.env.NEXT_PUBLIC_OFFICIAL_EVENT_CAL_ID,
-    color: '#575CCE',
-  },
-  {
-    calendarId: process.env.NEXT_PUBLIC_CRAFTY_FUN_CAL_ID,
-    color: '#EDF53A', //optional, specify color of calendar 2 events
-  },
-]
-
-let styles = {
-  //you can use object styles (no import required)
-  calendar: css`
-    background-color: #fff;
-    .calendar-title {
-      color: #575cce;
-      font-weight: bold;
-    }
-    .calendar-footer {
-      display: none;
-    }
-  `,
-}
+// const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_CAL_API_TOKEN
 
 export default function Events({ events }) {
   return (
@@ -63,9 +38,6 @@ export default function Events({ events }) {
             to see any community ran events! You can even host your own meetup
             or one-off event there. 👀
           </p>
-        </div>
-        <div className='mt-10'>
-          <Calendar apiKey={API_KEY} calendars={calendars} styles={styles} />
         </div>
       </section>
 
