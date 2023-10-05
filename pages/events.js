@@ -4,34 +4,6 @@ import Layout from '../components/Layout'
 import EventCard from '../components/EventCard'
 import { getAllEvents } from '../library/api'
 import PageHeader from '../components/PageHeader'
-import Calendar from '@ericz1803/react-google-calendar'
-import { css } from '@emotion/react'
-
-const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_CAL_API_TOKEN
-let calendars = [
-  {
-    calendarId: process.env.NEXT_PUBLIC_OFFICIAL_EVENT_CAL_ID,
-    color: '#575CCE',
-  },
-  {
-    calendarId: process.env.NEXT_PUBLIC_CRAFTY_FUN_CAL_ID,
-    color: '#EDF53A', //optional, specify color of calendar 2 events
-  },
-]
-
-let styles = {
-  //you can use object styles (no import required)
-  calendar: css`
-    background-color: #fff;
-    .calendar-title {
-      color: #575cce;
-      font-weight: bold;
-    }
-    .calendar-footer {
-      display: none;
-    }
-  `,
-}
 
 export default function Events({ events }) {
   return (
@@ -40,18 +12,7 @@ export default function Events({ events }) {
 
       <section className='container flex flex-col justify-center'>
         <div className='w-full lg:w-3/4 lg:mx-auto'>
-          <p>
-            Below, you can see a calendar of our events along with some other
-            fun events around Chicago. 💞
-          </p>
-          <p>
-            The calendar events with the blue color code and calendar name
-            &quot;Official Events&quot; are organized and ran by our awesome
-            volunteer staff. Then there are the yellow color coded events with
-            the calendar name &quot;Crafty Fun Around Chicago&quot;, which are
-            just some extra fun things we&apos;ve found around the city that may
-            interest you - these events are not organized by us directly.
-          </p>
+          <p>Below, you can see a calendar of our official events 💞</p>
           <p>
             Join our{' '}
             <Link
@@ -64,12 +25,9 @@ export default function Events({ events }) {
             or one-off event there. 👀
           </p>
         </div>
-        <div className='mt-10'>
-          <Calendar apiKey={API_KEY} calendars={calendars} styles={styles} />
-        </div>
       </section>
 
-      <section className='container flex flex-col justify-center'>
+      <section className='container pt-0 flex flex-col justify-center'>
         <h2 className='font-bold text-center text-blue'>
           Upcoming Official Events
         </h2>

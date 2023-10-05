@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <div className='w-full lg:w-5/6'>
             <p>
-              welcome to the chicago craft club. we’re a group of passionate
+              welcome to the chicago craft club. we’re a group of passionate 18+
               artists and crafters from all over the creative spectrum living in
               the chicagoland area.
             </p>
@@ -56,8 +56,8 @@ export default function Home() {
             <p className='lg:mb-8'>
               The Chicago Craft Club is for <strong>everyone</strong> -
               regardless of disability, sexual orientation, gender identity,
-              ethnicity, age, color, or origin. Plus, joining is just as simple
-              as checking us out on the platform(s) of your choice!
+              ethnicity, color, or origin. Plus, joining is just as simple as
+              checking us out on the platform(s) of your choice!
             </p>
           </div>
           <div className='flex flex-wrap justify-center'>
