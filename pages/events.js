@@ -4,9 +4,6 @@ import Layout from '../components/Layout'
 import EventCard from '../components/EventCard'
 import { getAllEvents } from '../library/api'
 import PageHeader from '../components/PageHeader'
-import { css } from '@emotion/react'
-
-// const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_CAL_API_TOKEN
 
 export default function Events({ events }) {
   return (
@@ -15,18 +12,7 @@ export default function Events({ events }) {
 
       <section className='container flex flex-col justify-center'>
         <div className='w-full lg:w-3/4 lg:mx-auto'>
-          <p>
-            Below, you can see a calendar of our events along with some other
-            fun events around Chicago. 💞
-          </p>
-          <p>
-            The calendar events with the blue color code and calendar name
-            &quot;Official Events&quot; are organized and ran by our awesome
-            volunteer staff. Then there are the yellow color coded events with
-            the calendar name &quot;Crafty Fun Around Chicago&quot;, which are
-            just some extra fun things we&apos;ve found around the city that may
-            interest you - these events are not organized by us directly.
-          </p>
+          <p>Below, you can see a calendar of our official events 💞</p>
           <p>
             Join our{' '}
             <Link
@@ -41,7 +27,7 @@ export default function Events({ events }) {
         </div>
       </section>
 
-      <section className='container flex flex-col justify-center'>
+      <section className='container pt-0 flex flex-col justify-center'>
         <h2 className='font-bold text-center text-blue'>
           Upcoming Official Events
         </h2>
