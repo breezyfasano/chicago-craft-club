@@ -1,31 +1,45 @@
+import { formatDate } from '../utils/data/functions/formatDate'
+
 export default function EventCard({ event }) {
-  const prepareDate = new Date(event.date).toLocaleDateString('en-us', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  })
+  const { title, date, time, description, link } = event
+
+  // const prepareDate = new Date(date).toLocaleDateString('en-us', {
+  //   weekday: 'long',
+  //   year: 'numeric',
+  //   month: 'short',
+  //   day: 'numeric',
+  // })
 
   const prepareTime = Intl.DateTimeFormat('en', {
     hour: 'numeric',
     minute: 'numeric',
-  }).format(new Date(event.time))
+  }).format(new Date(time))
+
+  const eventDate = formatDate(new Date(date))
+
   return (
-    <article className='bg-white rounded-md border-black border shadow-lg p-6 flex flex-col justify-between'>
-      <h2 className='font-black text-blue'>{event.title}</h2>
-      <div className='eventInfo my-3'>
-        <p className='font-bold text-blue '>{prepareDate}</p>
-        <p className='font-bold '>{prepareTime}</p>
-        <p>{event.description}</p>
+    <article className='eventCard relative bg-white rounded-md border-black border-2 shadow-lg pl-16 py-6'>
+      <div className='bg-pink border-2 rounded-md w-24 h-24 flex justify-center items-center flex-col absolute -top-8 -left-12'>
+        <span className='block'>{eventDate.weekday}</span>
+        <span className='block'>{eventDate.day}</span>
       </div>
-      <div className='text-center'>
+
+      <h2 className='font-bold text-blue m-0 leading-12'>{title}</h2>
+      <div className='eventInfo my-4'>
+        <p className='p-0 leading-8'>{description}</p>
+      </div>
+      <div className='flex gap-x-6'>
+        <a href={link} target='_blank' rel='noreferrer' className='button'>
+          RSVP here
+        </a>
+
         <a
-          href={event.link}
+          href={link}
           target='_blank'
           rel='noreferrer'
-          className='button'
+          className='button secondary'
         >
-          View Details
+          Add to calendar
         </a>
       </div>
     </article>

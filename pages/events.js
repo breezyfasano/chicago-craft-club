@@ -5,6 +5,14 @@ import EventCard from '../components/EventCard'
 import { getAllEvents } from '../library/api'
 import PageHeader from '../components/PageHeader'
 
+// TODO: Add to calendar button link is
+// a google cal link to create an event in your cal
+// must be dynamic
+
+// TODO: sort all cards based on month
+// will likely need to create a wrapper component for clarity
+// but can just filter and output from events data
+
 export default function Events({ events }) {
   return (
     <Layout>
@@ -27,11 +35,11 @@ export default function Events({ events }) {
         </div>
       </section>
 
-      <section className='container pt-0 flex flex-col justify-center'>
+      <section className='container lg:w-1/2 pt-0 flex flex-col justify-center'>
         <h2 className='font-bold text-center text-blue'>
           Upcoming Official Events
         </h2>
-        <div className='grid grid-cols-1 gap-6 py-4 lg:grid-cols-3'>
+        <div className='flex lg:gap-y-20 flex-col'>
           {events.length ? (
             events.map((event, index) => (
               <EventCard event={event} key={index} />
