@@ -1,6 +1,9 @@
 import axios from 'axios'
 import { EVENTBRITE_HEADERS, EVENTBRITE_ORG_ID } from '../constants'
 
+//TODO:
+// Refactor using map, sort, and reduce to avoid iterating twice.
+
 export async function getAllEvents() {
   // const { data } = await axios.get(
   //   `https://www.eventbriteapi.com/v3/organizations/${EVENTBRITE_ORG_ID}/events/?status=live&time_filter=current_future`,
@@ -273,10 +276,3 @@ export async function getAllEvents() {
     return formattedData
   }
 }
-
-// [
-//   {
-//     month: 'October',
-//     events: [...]
-//   }
-// ]
