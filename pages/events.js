@@ -35,7 +35,7 @@ export default function Events({ events }) {
         </div>
       </section>
 
-      <section className='container lg:w-1/2 pt-0 flex flex-col justify-center'>
+      {/* <section className='container lg:w-1/2 pt-0 flex flex-col justify-center'>
         <h2 className='font-bold text-center text-blue'>
           Upcoming Official Events
         </h2>
@@ -62,7 +62,7 @@ export default function Events({ events }) {
             </div>
           )}
         </div>
-      </section>
+      </section> */}
     </Layout>
   )
 }
