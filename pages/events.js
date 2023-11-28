@@ -35,14 +35,20 @@ export default function Events({ events }) {
         </div>
       </section>
 
-      {/* <section className='container lg:w-1/2 pt-0 flex flex-col justify-center'>
-        <h2 className='font-bold text-center text-blue'>
-          Upcoming Official Events
-        </h2>
-        <div className='flex lg:gap-y-20 flex-col'>
+      <section className='container md:w-3/4 lg:w-3/4 xl:w-1/2 mx-auto pt-0'>
+        <div className='flex gap-y-8 lg:gap-y-20 flex-col'>
           {events.length ? (
             events.map((event, index) => (
-              <EventCard event={event} key={index} />
+              <div key={index}>
+                <h2 className='text-center font-bold text-blue text-3xl mb-8'>
+                  {event.month}
+                </h2>
+                <div className='flex flex-col gap-y-20'>
+                  {event?.events?.map((event, index) => {
+                    return <EventCard event={event} key={index} />
+                  })}
+                </div>
+              </div>
             ))
           ) : (
             <div className='col-span-3'>
@@ -62,14 +68,13 @@ export default function Events({ events }) {
             </div>
           )}
         </div>
-      </section> */}
+      </section>
     </Layout>
   )
 }
 
 export async function getStaticProps() {
   const data = await getAllEvents()
-  // const data = EventData;
 
   return {
     props: {
