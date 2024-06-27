@@ -6,6 +6,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Events', href: '/events' },
   { name: 'Craft Cubby', href: '/craft-cubby' },
+  { name: 'Crochet 101 Zine', href: '/docs/crochet-zine.pdf' },
 ]
 
 function classNames(...classes) {
