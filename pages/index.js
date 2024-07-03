@@ -1,6 +1,7 @@
 import { SocialsList } from '../components/SocialsList'
 import Layout from '../components/Layout'
 import { MeetFriendsDoCrafts } from '../components/svg/MeetFriendsDoCrafts'
+import { SnippetCard } from '../components/Elements/SnippetCard'
 
 export default function Home() {
   return (
@@ -11,8 +12,9 @@ export default function Home() {
         </div>
       </header>
 
-      <section className={`w-full flex justify-center`}>
+      <section className={`w-full`}>
         <div className='container'>
+          <SnippetCard>Hello</SnippetCard>
           <p>
             welcome to the chicago craft club. we’re a group of passionate 18+
             artists and crafters from all over the creative spectrum living in
