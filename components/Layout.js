@@ -21,10 +21,6 @@ export default function Layout({ children, pageClass }) {
       <Navbar />
       <main className={`m-0 p-0 ${pageClass}`}>{children}</main>
       <Footer />
-      <Script
-        src='https://kit.fontawesome.com/486fda9fef.js'
-        crossOrigin='anonymous'
-      ></Script>
     </>
   )
 }
