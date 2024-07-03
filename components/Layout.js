@@ -3,7 +3,6 @@ import Navbar from './Navbar'
 import AnnouncementBar from './AnnouncementBar'
 import Footer from './Footer'
 import Head from 'next/head'
-import Script from 'next/script'
 
 export default function Layout({ children, pageClass }) {
   return (

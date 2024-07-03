@@ -1,0 +1,12 @@
+import Link from 'next/link'
+
+export const Button = ({ children, link, className }) => {
+  return (
+    <Link
+      href={link}
+      className={`inline-block shadow-[4px_4px_0px_#000] border-[3px] border-gray bg-yellow px-6 py-2 text-gray rounded-full font-bold text-sm lg:text-lg ${className}`}
+    >
+      {children}
+    </Link>
+  )
+}

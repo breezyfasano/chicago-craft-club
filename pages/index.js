@@ -1,11 +1,14 @@
 import { SocialsList } from '../components/SocialsList'
 import Layout from '../components/Layout'
+import { MeetFriendsDoCrafts } from '../components/svg/MeetFriendsDoCrafts'
 
 export default function Home() {
   return (
     <Layout>
       <header className='py-8 lg:py-12 bg-blue text-yellow'>
-        <h1>Chicago Craft Club</h1>
+        <div className='container'>
+          <MeetFriendsDoCrafts className='mx-auto w-full' />
+        </div>
       </header>
 
       <section className={`w-full flex justify-center`}>

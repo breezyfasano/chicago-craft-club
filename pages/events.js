@@ -74,8 +74,13 @@ export default function Events({ events }) {
 }
 
 export async function getStaticProps() {
-  const data = await getAllEvents()
-
+  let data
+  try {
+    data = await getAllEvents()
+  } catch (error) {
+    console.log(error)
+  }
+  console.log(data)
   return {
     props: {
       events: data,
