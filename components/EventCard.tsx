@@ -1,4 +1,10 @@
-export default function EventCard({ event }) {
+import type { Event } from './types'
+
+type EventCardProps = {
+  event: Event
+}
+
+export default function EventCard({ event }: EventCardProps) {
   const prepareDate = new Date(event.date).toLocaleDateString('en-us', {
     weekday: 'long',
     year: 'numeric',

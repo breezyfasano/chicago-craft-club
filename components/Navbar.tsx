@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Disclosure, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { Logotype } from '../components/svg/Logotype'
+import { Logotype } from './svg/Logotype'
 import { Button } from './Elements/Button'
 
 const navigation = [
@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Crochet 101 Zine', href: '/docs/crochet-zine.pdf' },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
@@ -75,7 +75,6 @@ export default function Navbar() {
                     className={classNames(
                       'block text-black px-3 py-2 rounded-md text-sm font-bold'
                     )}
-                    aria-current={item.current ? 'page' : undefined}
                   >
                     {item.name}
                   </Disclosure.Button>

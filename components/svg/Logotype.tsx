@@ -1,4 +1,4 @@
-export const Logotype = ({ className }) => {
+export const Logotype = ({ className }: { className?: string }) => {
   return (
     <svg
       width='157'

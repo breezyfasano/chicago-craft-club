@@ -1,6 +1,7 @@
 import Link from 'next/link'
+import { ButtonProps } from './types'
 
-export const Button = ({ children, link, className }) => {
+export const Button = ({ children, link, className }: ButtonProps) => {
   return (
     <Link
       href={link}

@@ -1,4 +1,4 @@
-export const formatDate = (date) => {
+export const formatDate = (date: Date) => {
   const daysOfWeek = ['Sun', 'Mon', 'Tues', 'Weds', 'Thurs', 'Fri', 'Sat']
   const monthsOfYear = [
     'January',
