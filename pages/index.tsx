@@ -30,11 +30,6 @@ export default function Home() {
               regardless of disability, sexual orientation, gender identity,
               ethnicity, color, or origin.
             </p>
-            <div>
-              <span className='block text-center text-xl font-sans font-black my-6'>
-                some of the things we like to do are...
-              </span>
-            </div>
           </div>
 
           <div className='lg:w-1/2'>
@@ -51,6 +46,14 @@ export default function Home() {
               </p>
             </SnippetCard>
           </div>
+        </div>
+      </section>
+
+      <section className='w-full pt-0'>
+        <div className='container'>
+          <span className='block text-center text-xl font-sans font-black'>
+            some of the things we like to do are...
+          </span>
         </div>
       </section>
 
