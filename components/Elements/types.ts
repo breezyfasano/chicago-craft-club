@@ -3,3 +3,8 @@ export type ButtonProps = {
   link: string
   className?: string
 }
+
+export type HeaderProps = {
+  children: React.ReactNode
+  className?: string
+}

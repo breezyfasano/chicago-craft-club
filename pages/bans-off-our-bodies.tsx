@@ -3,9 +3,9 @@ import Link from 'next/link'
 import fsPromises from 'fs/promises'
 import path from 'path'
 import Layout from '../components/Layout'
-import VendorCard from '../components/VendorCard'
+import VendorCard from '../components/Cards/VendorCard'
 
-export default function BansOffOurBodies({ vendors }) {
+export default function BansOffOurBodies({ vendors }: { vendors: any }) {
   return (
     <Layout>
       <section className='w-full flex justify-center bg-boobs-pink'>

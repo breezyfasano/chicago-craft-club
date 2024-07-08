@@ -1,7 +1,7 @@
 import { SocialsList } from '../components/SocialsList'
 import Layout from '../components/Layout'
 import { MeetFriendsDoCrafts } from '../components/svg/MeetFriendsDoCrafts'
-import { SnippetCard } from '../components/Elements/SnippetCard'
+import { SnippetCard } from '../components/Cards/SnippetCard'
 
 export default function Home() {
   return (
@@ -13,34 +13,43 @@ export default function Home() {
       </header>
 
       <section className={`w-full`}>
-        <div className='container'>
-          <SnippetCard>Hello</SnippetCard>
-          <p>
-            welcome to the chicago craft club. we’re a group of passionate 18+
-            artists and crafters from all over the creative spectrum living in
-            the chicagoland area.
-          </p>
-          <p>
-            this group is about meeting fellow crafters that are passionate
-            about crafting and community, learning from each other, and just
-            plain ol’ hanging out.
-          </p>
-        </div>
-      </section>
-
-      <section className={`join `}>
-        <div className='container'>
-          <div className='flex flex-wrap justify-center'>
-            <h1>how to join</h1>
-            <p className='lg:mb-8'>
+        <div className='container flex gap-x-12'>
+          <div className='lg:w-1/2 text-md leading-8 font-semibold'>
+            <p>
+              welcome to the chicago craft club. we’re a group of passionate 18+
+              artists and crafters from all over the creative spectrum living in
+              the chicagoland area.
+            </p>
+            <p>
+              this group is about meeting fellow crafters that are passionate
+              about crafting and community, learning from each other, and just
+              plain ol’ hanging out.
+            </p>
+            <p>
               The Chicago Craft Club is for <strong>everyone</strong> -
               regardless of disability, sexual orientation, gender identity,
-              ethnicity, color, or origin. Plus, joining is just as simple as
-              checking us out on the platform(s) of your choice!
+              ethnicity, color, or origin.
             </p>
+            <div>
+              <span className='block text-center text-xl font-sans font-black my-6'>
+                some of the things we like to do are...
+              </span>
+            </div>
           </div>
-          <div className='flex flex-wrap justify-center'>
-            <SocialsList />
+
+          <div className='lg:w-1/2'>
+            <SnippetCard
+              heading='how to join the craft club'
+              cta={{
+                link: 'https://app.geneva.com/invite/3a4ab924-4f52-4b7a-b0d5-c234ba74ea39',
+                text: 'Join on Geneva',
+              }}
+            >
+              <p className='font-sans text-base font-semibold'>
+                Joining is as simple as signing up for our online community on
+                Geneva and/or coming to one of our meetups.
+              </p>
+            </SnippetCard>
           </div>
         </div>
       </section>
