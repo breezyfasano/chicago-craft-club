@@ -5,14 +5,6 @@ import EventCard from '../components/EventCard'
 import { getAllEvents } from '../library/api'
 import PageHeader from '../components/PageHeader'
 
-// TODO: Add to calendar button link is
-// a google cal link to create an event in your cal
-// must be dynamic
-
-// TODO: sort all cards based on month
-// will likely need to create a wrapper component for clarity
-// but can just filter and output from events data
-
 export default function Events({ events }) {
   return (
     <Layout>
@@ -35,20 +27,14 @@ export default function Events({ events }) {
         </div>
       </section>
 
-      <section className='container md:w-3/4 lg:w-3/4 xl:w-1/2 mx-auto pt-0'>
-        <div className='flex gap-y-8 lg:gap-y-20 flex-col'>
+      <section className='container pt-0 flex flex-col justify-center'>
+        <h2 className='font-bold text-center text-blue'>
+          Upcoming Official Events
+        </h2>
+        <div className='grid grid-cols-1 gap-6 py-4 lg:grid-cols-3'>
           {events.length ? (
             events.map((event, index) => (
-              <div key={index}>
-                <h2 className='text-center font-bold text-blue text-3xl mb-8'>
-                  {event.month}
-                </h2>
-                <div className='flex flex-col gap-y-20'>
-                  {event?.events?.map((event, index) => {
-                    return <EventCard event={event} key={index} />
-                  })}
-                </div>
-              </div>
+              <EventCard event={event} key={index} />
             ))
           ) : (
             <div className='col-span-3'>
@@ -74,13 +60,9 @@ export default function Events({ events }) {
 }
 
 export async function getStaticProps() {
-  let data
-  try {
-    data = await getAllEvents()
-  } catch (error) {
-    console.log(error)
-  }
-  console.log(data)
+  const data = await getAllEvents()
+  // const data = EventData;
+
   return {
     props: {
       events: data,
