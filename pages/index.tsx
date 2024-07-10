@@ -13,15 +13,15 @@ export default function Home() {
       </header>
 
       <section className={`w-full`}>
-        <div className='container flex gap-x-12'>
+        <div className='container lg:flex-row flex-col flex gap-8 lg:gap-12'>
           <div className='lg:w-1/2 text-md leading-8 font-semibold'>
             <p>
-              welcome to the chicago craft club. we’re a group of passionate 18+
+              Welcome to the Chicago Craft Club! We’re a group of passionate 18+
               artists and crafters from all over the creative spectrum living in
-              the chicagoland area.
+              the Chicagoland area.
             </p>
             <p>
-              this group is about meeting fellow crafters that are passionate
+              This group is about meeting fellow crafters that are passionate
               about crafting and community, learning from each other, and just
               plain ol’ hanging out.
             </p>

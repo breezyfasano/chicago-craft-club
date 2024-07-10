@@ -17,7 +17,7 @@ export const SnippetCard = ({ children, heading, cta }: SnippetCardProps) => {
       <div>{children}</div>
       {cta?.link && cta?.text ? (
         <div className='flex items-center pt-4'>
-          <Button className='mx-auto' link={cta.link}>
+          <Button secondary className='mx-auto' link={cta.link}>
             {cta.text}
           </Button>
         </div>
