@@ -4,8 +4,11 @@ import Layout from '../components/Layout'
 import EventCard from '../components/Cards/EventCard'
 import { getAllEvents } from '../library/api'
 import PageHeader from '../components/PageHeader'
+import type { FormattedEvent } from '../library/providers/eventbrite'
 
-export default function Events({ events }) {
+// TODO: Clean up and refactor file to be cleaner
+
+export default function Events({ events }: { events: FormattedEvent[] }) {
   return (
     <Layout>
       <PageHeader text='Our Events' />
@@ -31,11 +34,23 @@ export default function Events({ events }) {
         <h2 className='font-bold text-center text-blue'>
           Upcoming Official Events
         </h2>
-        <div className='grid grid-cols-1 gap-6 py-4 lg:grid-cols-3'>
-          {events.length ? (
-            events.map((event, index) => (
-              <EventCard event={event} key={index} />
-            ))
+        <div className='flex flex-col gap-y-12 pt-8'>
+          {Object.keys(events).length > 0 ? (
+            Object.entries(events).map(([month, events]) => {
+              return (
+                <>
+                  <h2 className='text-center font-bold text-gray'>{month}</h2>
+                  {Array.isArray(events) &&
+                    events.map((event: FormattedEvent) => {
+                      return (
+                        <>
+                          <EventCard event={event} key={event.id} />
+                        </>
+                      )
+                    })}
+                </>
+              )
+            })
           ) : (
             <div className='col-span-3'>
               <p className='text-lg text-center'>
@@ -61,7 +76,6 @@ export default function Events({ events }) {
 
 export async function getStaticProps() {
   const data = await getAllEvents()
-  // const data = EventData;
 
   return {
     props: {
