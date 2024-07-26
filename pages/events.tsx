@@ -6,8 +6,6 @@ import { getAllEvents } from '../library/api'
 import PageHeader from '../components/PageHeader'
 import type { FormattedEvent } from '../library/providers/eventbrite'
 
-// TODO: Clean up and refactor file to be cleaner
-
 export default function Events({ events }: { events: FormattedEvent[] }) {
   return (
     <Layout>
