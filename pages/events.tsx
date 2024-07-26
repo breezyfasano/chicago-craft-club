@@ -35,12 +35,12 @@ export default function Events({ events }: { events: FormattedEvent[] }) {
       </section>
 
       <section className='container pt-0 flex flex-col justify-center'>
-        <div className='flex flex-col gap-y-12'>
+        <div className='flex flex-col gap-y-8 lg:gap-y-12'>
           {Object.keys(events).length > 0 ? (
             Object.entries(events).map(([month, events]) => {
               return (
                 <>
-                  <h2 className='text-center text-3xl border-b-4 text-gray pb-6 font-display'>
+                  <h2 className='text-center text-2xl lg:text-3xl border-b-4 text-gray pb-3 lg:pb-6 font-display'>
                     {month}
                   </h2>
                   {Array.isArray(events) &&
