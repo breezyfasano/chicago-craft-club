@@ -50,7 +50,10 @@ export default function Navbar() {
                       </li>
                     ))}
                   </ul>
-                  <Button link='https://app.geneva.com/invite/3a4ab924-4f52-4b7a-b0d5-c234ba74ea39'>
+                  <Button
+                    newTab
+                    link='https://app.geneva.com/invite/3a4ab924-4f52-4b7a-b0d5-c234ba74ea39'
+                  >
                     join online community
                   </Button>
                 </div>
@@ -79,7 +82,10 @@ export default function Navbar() {
                     {item.name}
                   </Disclosure.Button>
                 ))}
-                <Button link='https://app.geneva.com/invite/3a4ab924-4f52-4b7a-b0d5-c234ba74ea39'>
+                <Button
+                  newTab
+                  link='https://app.geneva.com/invite/3a4ab924-4f52-4b7a-b0d5-c234ba74ea39'
+                >
                   join online community
                 </Button>
               </div>

@@ -34,8 +34,8 @@ export default function Events({ events }: { events: FormattedEvent[] }) {
         </div>
       </section>
 
-      <section className='container pt-0 flex flex-col justify-center'>
-        <div className='flex flex-col gap-y-8 lg:gap-y-12'>
+      <section className='container pt-0  flex flex-col justify-center'>
+        <div className='flex flex-col gap-y-8 lg:gap-y-12 lg:w-3/4 mx-auto'>
           {Object.keys(events).length > 0 ? (
             Object.entries(events).map(([month, events]) => {
               return (

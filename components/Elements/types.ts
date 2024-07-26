@@ -3,6 +3,7 @@ export type ButtonProps = {
   link: string
   className?: string
   secondary?: boolean
+  newTab?: boolean
 }
 
 export type HeaderProps = {
