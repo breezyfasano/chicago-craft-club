@@ -29,7 +29,7 @@ export default function EventCard({ event }: EventCardProps) {
           href={event.link}
           target='_blank'
           rel='noreferrer'
-          className='button hover:font-bold'
+          className='button hover:font-bold mt-4'
         >
           View Details
         </a>
