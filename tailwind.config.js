@@ -4,6 +4,14 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    container: {
+      screens: {
+        sm: '100%',
+        md: '100%',
+        lg: '1024px',
+        xl: '1280px',
+      },
+    },
     extend: {
       fontSize: {
         xxs: '0.875rem', //14px
@@ -26,11 +34,11 @@ module.exports = {
       },
       colors: {
         transparent: 'transparent',
-        blue: '#575CCE',
+        blue: '#3D69F0',
         sky: '#ABAEFF',
         pink: '#F0BBF3',
-        yellow: '#EDF53A',
-        beige: '#FEFFEA',
+        yellow: '#FAFF7E',
+        beige: '#FFF2EA',
         gray: '#1E1E1E',
         black: '#000000',
         white: '#FFFFFF',
@@ -43,6 +51,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Libre Franklin', 'sans-serif'],
+      display: ['Dela Gothic One', 'sans-serif'],
     },
   },
   plugins: [],

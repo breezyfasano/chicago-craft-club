@@ -1,11 +1,13 @@
-import React from 'react'
 import Navbar from './Navbar'
-import AnnouncementBar from './AnnouncementBar'
 import Footer from './Footer'
 import Head from 'next/head'
-import Script from 'next/script'
 
-export default function Layout({ children, pageClass }) {
+type LayoutProps = {
+  children: React.ReactNode
+  pageClass?: string
+}
+
+export default function Layout({ children, pageClass }: LayoutProps) {
   return (
     <>
       <Head>
@@ -17,14 +19,9 @@ export default function Layout({ children, pageClass }) {
         <meta itemProp='name' content='Chicago Craft Club' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
-      <AnnouncementBar />
       <Navbar />
       <main className={`m-0 p-0 ${pageClass}`}>{children}</main>
       <Footer />
-      <Script
-        src='https://kit.fontawesome.com/486fda9fef.js'
-        crossOrigin='anonymous'
-      ></Script>
     </>
   )
 }

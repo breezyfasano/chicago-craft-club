@@ -3,9 +3,21 @@ import Link from 'next/link'
 import fsPromises from 'fs/promises'
 import path from 'path'
 import Layout from '../components/Layout'
-import VendorCard from '../components/VendorCard'
+import VendorCard from '../components/Cards/VendorCard'
 
-export default function BansOffOurBodies({ vendors }) {
+type vendorProps = {
+  vendors: vendor[]
+}
+
+type vendor = {
+  name: string
+  instagram: string
+  etsy: string
+  website: string
+  image: string
+}
+
+export default function BansOffOurBodies({ vendors }: vendorProps) {
   return (
     <Layout>
       <section className='w-full flex justify-center bg-boobs-pink'>
@@ -45,7 +57,7 @@ export default function BansOffOurBodies({ vendors }) {
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), '/utils/data/vendors.json')
   const jsonData = await fsPromises.readFile(filePath)
-  const vendors = JSON.parse(jsonData)
+  const vendors = JSON.parse(jsonData.toString())
 
   return {
     props: {

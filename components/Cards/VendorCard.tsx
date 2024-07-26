@@ -1,6 +1,16 @@
-export default function VendorCard({ vendor }) {
+type VendorCardProps = {
+  vendor: {
+    pronouns?: string
+    name?: string
+    description?: string
+    website?: string
+    instagram?: string
+  }
+}
+
+export default function VendorCard({ vendor }: VendorCardProps) {
   const cleanHandle = () => {
-    let newHandle = vendor.instagram.replace('@', '')
+    let newHandle = vendor?.instagram?.replace('@', '')
     return 'https://www.instagram.com/' + newHandle
   }
 

@@ -1,5 +1,6 @@
 // Imports
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -53,11 +54,10 @@
     margin-right: auto;
     margin-left: auto;
   }
-  @apply lg:px-10 md:max-w-full md:w-full lg:w-auto;
+  @apply lg:px-10 md:max-w-full px-4;
 }
 
 // Text
-
 p a,
 li:not(.nav-link) a {
   text-decoration: underline;
@@ -68,9 +68,9 @@ li:not(.nav-link) a {
 }
 
 .button {
-  @apply bg-pink inline-block mx-auto py-4 px-8 rounded-full no-underline font-black hover:font-black;
+  @apply bg-pink inline-block py-4 px-8 rounded-full no-underline font-bold hover:font-black;
   box-shadow: 5px 5px 0px black;
-  border: 1px solid black;
+  border: 2px solid black;
   &:active {
     box-shadow: 0px 0px 0px black;
     transform: translateY(5px);
@@ -83,19 +83,6 @@ li:not(.nav-link) a {
   @media (min-width: 1200px) {
     padding: 0;
     width: auto;
-  }
-}
-
-.header {
-  @apply bg-center bg-no-repeat bg-cover flex items-center justify-center pt-12;
-  background-image: url('/header.svg');
-  @media (min-width: 992px) {
-    min-height: 30vw;
-    padding-top: 0;
-  }
-  @media (min-width: 1200px) {
-    min-height: 32vw;
-    padding-top: 0;
   }
 }
 
@@ -112,4 +99,13 @@ li:not(.nav-link) a {
 
 .socialsList {
   @apply flex list-none p-0 w-full mt-6 lg:mt-0 space-x-8 lg:space-x-5;
+}
+
+.eventCard {
+  .button {
+    @apply py-2 px-6 text-xs lg:text-sm font-bold inline-block w-full text-center md:w-auto;
+    &.secondary {
+      @apply bg-yellow;
+    }
+  }
 }
