@@ -15,7 +15,10 @@ export default function Events({ events }: { events: FormattedEvent[] }) {
 
       <section className='container flex flex-col justify-center'>
         <div className='w-full lg:w-3/4 lg:mx-auto'>
-          <p>Below, you can see a calendar of our official events 💞</p>
+          <p>
+            Below, you can see a calendar of our official events organized by us
+            💞
+          </p>
           <p>
             Join our{' '}
             <Link
@@ -25,21 +28,21 @@ export default function Events({ events }: { events: FormattedEvent[] }) {
               Geneva chatroom
             </Link>{' '}
             to see any community ran events! You can even host your own meetup
-            or one-off event there. 👀
+            or one-off event there.
           </p>
+          <p className='font-bold'>All of our events are free to enter :)</p>
         </div>
       </section>
 
       <section className='container pt-0 flex flex-col justify-center'>
-        <h2 className='font-bold text-center text-blue'>
-          Upcoming Official Events
-        </h2>
-        <div className='flex flex-col gap-y-12 pt-8'>
+        <div className='flex flex-col gap-y-12'>
           {Object.keys(events).length > 0 ? (
             Object.entries(events).map(([month, events]) => {
               return (
                 <>
-                  <h2 className='text-center font-bold text-gray'>{month}</h2>
+                  <h2 className='text-center text-3xl border-b-4 text-gray pb-6 font-display'>
+                    {month}
+                  </h2>
                   {Array.isArray(events) &&
                     events.map((event: FormattedEvent) => {
                       return (

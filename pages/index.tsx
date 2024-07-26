@@ -1,16 +1,13 @@
-import { SocialsList } from '../components/SocialsList'
 import Layout from '../components/Layout'
-import { MeetFriendsDoCrafts } from '../components/svg/MeetFriendsDoCrafts'
+import Link from 'next/link'
 import { SnippetCard } from '../components/Cards/SnippetCard'
+import { CalloutList } from '../components/CalloutList'
+import { HomeHero } from '../components/Heroes/HomeHero'
 
 export default function Home() {
   return (
     <Layout>
-      <header className='py-8 lg:py-12 bg-blue text-yellow'>
-        <div className='container'>
-          <MeetFriendsDoCrafts className='mx-auto w-full' />
-        </div>
-      </header>
+      <HomeHero />
 
       <section className={`w-full`}>
         <div className='container lg:flex-row flex-col flex gap-8 lg:gap-12'>
@@ -27,8 +24,8 @@ export default function Home() {
             </p>
             <p>
               The Chicago Craft Club is for <strong>everyone</strong> -
-              regardless of disability, sexual orientation, gender identity,
-              ethnicity, color, or origin.
+              regardless of disability, sexual orientation, age (as long as
+              you're an adult), gender identity, ethnicity, color, or origin.
             </p>
           </div>
 
@@ -36,8 +33,8 @@ export default function Home() {
             <SnippetCard
               heading='how to join the craft club'
               cta={{
-                link: 'https://app.geneva.com/invite/3a4ab924-4f52-4b7a-b0d5-c234ba74ea39',
-                text: 'Join on Geneva',
+                link: '/events',
+                text: 'View events',
               }}
             >
               <p className='font-sans text-base font-semibold'>
@@ -49,27 +46,29 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='w-full pt-0'>
-        <div className='container'>
-          <span className='block text-center text-xl font-sans font-black'>
-            some of the things we like to do are...
-          </span>
-        </div>
-      </section>
+      <CalloutList
+        items={[
+          { text: 'byoc* meetups', hoverText: 'bring your own craft meetups' },
+          { text: 'share art supplies' },
+          { text: 'teach each other' },
+        ]}
+      />
 
-      <section className='callout bg-pink'>
+      <section className='callout bg-blue text-white'>
         <div className='flex flex-wrap justify-center'>
           <div className='container'>
-            <p>
+            <p className='text-lg'>
               do you have an idea for an event? interested in volunteering? have
               a business inquiry?
             </p>
-            <p>
+            <p className='text-lg'>
               please contact us at{' '}
-              <a href='mailto:hello@chicagocraft.club'>
-                {' '}
+              <Link
+                href='mailto:hello@chicagocraft.club'
+                className='hover:!text-pink'
+              >
                 hello@chicagocraft.club
-              </a>
+              </Link>
             </p>
           </div>
         </div>
