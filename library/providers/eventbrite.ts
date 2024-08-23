@@ -34,7 +34,7 @@ export async function getAllEvents() {
 
   const formatEventData = (eventData: eventData[]) => {
     // Initially format into a new array of objects
-    const events = eventData.reduce<FormattedEvent[]>(
+    const events = eventData?.reduce<FormattedEvent[]>(
       (previousValue, event) => {
         let newItem = {
           title: event.name.text,

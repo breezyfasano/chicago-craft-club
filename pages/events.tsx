@@ -34,7 +34,7 @@ export default function Events({ events }: { events: FormattedEvent[] }) {
 
       <section className='container pt-0  flex flex-col justify-center'>
         <div className='flex flex-col gap-y-8 lg:gap-y-12 lg:w-3/4 mx-auto'>
-          {Object.keys(events).length > 0 ? (
+          {events && Object.keys(events).length > 0 ? (
             Object.entries(events).map(([month, events]) => {
               return (
                 <>
@@ -42,7 +42,7 @@ export default function Events({ events }: { events: FormattedEvent[] }) {
                     {month}
                   </h2>
                   {Array.isArray(events) &&
-                    events.map((event: FormattedEvent) => {
+                    events?.map((event: FormattedEvent) => {
                       return (
                         <>
                           <EventCard event={event} key={event.id} />
