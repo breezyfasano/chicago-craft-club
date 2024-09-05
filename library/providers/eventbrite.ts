@@ -53,7 +53,7 @@ export async function getAllEvents() {
       []
     )
 
-    const events = [...eventbriteEvents, ...manualEvents]
+    const events = [...manualEvents, ...eventbriteEvents]
 
     // Group events by month
     // use reduce function
