@@ -8,7 +8,10 @@ import type { FormattedEvent } from '../library/providers/eventbrite'
 
 export default function Events({ events }: { events: FormattedEvent[] }) {
   return (
-    <Layout>
+    <Layout
+      metaTitle='Events and Meetups by Chicago Craft Club'
+      metaDescription='Discover upcoming Chicago Craft Club events! Attend free meetups to connect with fellow crocheters, knitters, illustrators, and all other crafters alike.'
+    >
       <PageHeader text='Our Events' />
 
       <section className='container flex flex-col justify-center'>

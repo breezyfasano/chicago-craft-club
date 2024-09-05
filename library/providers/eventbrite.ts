@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { EVENTBRITE_HEADERS, EVENTBRITE_ORG_ID } from '../constants'
+import manualEvents from './manualEvents.json'
 
 type eventData = {
   name: {
@@ -34,7 +35,7 @@ export async function getAllEvents() {
 
   const formatEventData = (eventData: eventData[]) => {
     // Initially format into a new array of objects
-    const events = eventData?.reduce<FormattedEvent[]>(
+    const eventbriteEvents = eventData?.reduce<FormattedEvent[]>(
       (previousValue, event) => {
         let newItem = {
           title: event.name.text,
@@ -51,6 +52,8 @@ export async function getAllEvents() {
       },
       []
     )
+
+    const events = [...manualEvents, ...eventbriteEvents]
 
     // Group events by month
     // use reduce function
