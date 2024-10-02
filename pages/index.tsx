@@ -10,8 +10,8 @@ export default function Home() {
       <HomeHero />
 
       <section className={`w-full`}>
-        <div className='container lg:flex-row flex-col flex gap-8 lg:gap-12'>
-          <div className='lg:w-1/2 text-md leading-8 font-semibold'>
+        <div className='container flex flex-col gap-8 lg:flex-row lg:gap-12'>
+          <div className='text-md font-semibold leading-8 lg:w-1/2'>
             <p>
               Welcome to the Chicago Craft Club! We&apos;re a group of
               passionate 18+ artists and crafters from all over the creative

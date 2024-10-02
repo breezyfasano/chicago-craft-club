@@ -10,8 +10,8 @@
     "inlineSources": false,
     "isolatedModules": true,
     "moduleResolution": "node",
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
+    "noUnusedLocals": true, // Changed to true for better code quality
+    "noUnusedParameters": true, // Changed to true for better code quality
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strict": true,
@@ -25,5 +25,5 @@
     "resolveJsonModule": true
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "declarations.d.ts"]
 }
