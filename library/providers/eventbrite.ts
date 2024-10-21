@@ -26,34 +26,34 @@ export type FormattedEvent = {
 }
 
 export async function getAllEvents() {
-  const { data } = await axios.get(
-    `https://www.eventbriteapi.com/v3/organizations/${EVENTBRITE_ORG_ID}/events/?status=live&time_filter=current_future`,
-    {
-      headers: EVENTBRITE_HEADERS,
-    }
-  )
+  // const { data } = await axios.get(
+  //   `https://www.eventbriteapi.com/v3/organizations/${EVENTBRITE_ORG_ID}/events/?status=live&time_filter=current_future`,
+  //   {
+  //     headers: EVENTBRITE_HEADERS,
+  //   }
+  // )
 
   const formatEventData = (eventData: eventData[]) => {
     // Initially format into a new array of objects
-    const eventbriteEvents = eventData?.reduce<FormattedEvent[]>(
-      (previousValue, event) => {
-        let newItem = {
-          title: event.name.text,
-          date: event.start.utc,
-          description: event.description.text,
-          link: event.url,
-          month: new Date(event.start.utc).toLocaleString('default', {
-            month: 'long',
-          }),
-          id: event.id,
-        }
-        previousValue.push(newItem)
-        return previousValue
-      },
-      []
-    )
+    // const eventbriteEvents = eventData?.reduce<FormattedEvent[]>(
+    //   (previousValue, event) => {
+    //     let newItem = {
+    //       title: event.name.text,
+    //       date: event.start.utc,
+    //       description: event.description.text,
+    //       link: event.url,
+    //       month: new Date(event.start.utc).toLocaleString('default', {
+    //         month: 'long',
+    //       }),
+    //       id: event.id,
+    //     }
+    //     previousValue.push(newItem)
+    //     return previousValue
+    //   },
+    //   []
+    // )
 
-    const events = manualEvents.length ? [...manualEvents, ...eventbriteEvents] : eventbriteEvents
+    const events = manualEvents.length ? [...manualEvents] : []
 
     // Group events by month
     // use reduce function
@@ -72,6 +72,6 @@ export async function getAllEvents() {
     // Return final array of events by month
   }
 
-  const formattedData = formatEventData(data.events)
+  const formattedData = formatEventData()
   return formattedData
 }

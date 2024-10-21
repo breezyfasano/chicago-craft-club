@@ -1,21 +1,5 @@
 [
   {
-    "title": "Coffee and Crafts at Pilot Project Brewing",
-    "date": "2024-10-12T16:00:00Z",
-    "description": "Bring a craft (spoiler: anything is a craft!), meet us at Pilot Project, and enjoy their full espresso bar while you create.",
-    "link": "https://plan.getpie.app/plans/df0246f0-7e95-11ef-bb01-e5536f8dcf91?inviter=df403a50-7e95-11ef-bb01-e5536f8dcf91",
-    "month": "October",
-    "id": "pilot-project-october"
-  },
-  {
-    "title": "Bring-Your-Own-Craft at the WNDR Museum",
-    "date": "2024-10-20T17:00:00Z",
-    "description": "The Chicago Craft Club is partnering with the WNDR Museum for a very special Bring-Your-Own-Craft event! Bring something to work on and create in WNDR's beautiful event space. Attendees will also receive a coupon for discounted museum tickets ✨",
-    "link": "https://wndrmuseum.com/event/chicago-craft-club/",
-    "month": "October",
-    "id": "wndr-october"
-  },
-  {
     "title": "Bring-Your-Own-Craft at Glessner House",
     "date": "2024-10-27T19:00:00Z",
     "description": "Come craft with us at the historic Glessner House!",
@@ -30,5 +14,29 @@
     "link": "https://plan.getpie.app/plans/9b8fbfc0-7e99-11ef-bb01-e5536f8dcf91?inviter=9bc834e0-7e99-11ef-bb01-e5536f8dcf91",
     "month": "October",
     "id": "haunted-handicrafts"
+  },
+  {
+    "title": "Coffee and Crafts at Pilot Project Brewing",
+    "date": "2024-11-16T17:00:00Z",
+    "description": "Bring a craft (spoiler: anything is a craft!), meet us at Pilot Project, and enjoy their full espresso bar while you create.",
+    "link": "https://plan.getpie.app/plans/8558b650-8c84-11ef-9607-49c1d718b127?inviter=85848140-8c84-11ef-9607-49c1d718b127",
+    "month": "November",
+    "id": "pilot-project-november"
+  },
+  {
+    "title": "Pop-Up Makers Market at Second Shift Coworking",
+    "date": "2024-11-23T18:00:00Z",
+    "description": "Come support local creatives at our makers market!",
+    "link": "https://plan.getpie.app/plans/c825ec00-8d60-11ef-9607-49c1d718b127?inviter=c85a6980-8d60-11ef-9607-49c1d718b127",
+    "month": "November",
+    "id": "makers-market-november"
+  },
+  {
+    "title": "Bring-Your-Own-Craft at Glessner House",
+    "date": "2024-11-24T20:00:00Z",
+    "description": "Come craft with us at the historic Glessner House!",
+    "link": "https://plan.getpie.app/plans/4211a8c0-8c84-11ef-9607-49c1d718b127?inviter=423cd770-8c84-11ef-9607-49c1d718b127",
+    "month": "November",
+    "id": "glessner-house-november"
   }
 ]
