@@ -33,7 +33,7 @@ export async function getAllEvents() {
   //   }
   // )
 
-  const formatEventData = (eventData: eventData[]) => {
+  const formatEventData = () => {
     // Initially format into a new array of objects
     // const eventbriteEvents = eventData?.reduce<FormattedEvent[]>(
     //   (previousValue, event) => {
