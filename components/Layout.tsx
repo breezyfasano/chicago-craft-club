@@ -23,8 +23,8 @@ export default function Layout({
         <meta name='description' content={metaDescription} />
         <meta itemProp='name' content={`${metaTitle}`} />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <GoogleTagManager gtmId='G-B8YP25Y1MW' />
       </Head>
+      <GoogleTagManager gtmId='G-B8YP25Y1MW' />
       <Navbar />
       <main className={`m-0 p-0 ${pageClass}`}>{children}</main>
       <Footer />
