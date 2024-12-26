@@ -1,7 +1,7 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Head from 'next/head'
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 type LayoutProps = {
   children: React.ReactNode
@@ -24,7 +24,7 @@ export default function Layout({
         <meta itemProp='name' content={`${metaTitle}`} />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
-      <GoogleTagManager gtmId='G-B8YP25Y1MW' />
+      <GoogleAnalytics gaId='G-B8YP25Y1MW' />
       <Navbar />
       <main className={`m-0 p-0 ${pageClass}`}>{children}</main>
       <Footer />
