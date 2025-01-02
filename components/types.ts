@@ -1,7 +1,3 @@
-export type Event = {
-  title: string
-  date: string
-  time?: string
-  description: string
-  link: string
-}
+import { SanityFormattedEvent } from '../library/providers/sanitycms'
+
+export type Event = SanityFormattedEvent & { humanDate?: string }

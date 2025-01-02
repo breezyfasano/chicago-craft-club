@@ -1,12 +1,17 @@
 import React from 'react'
+import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 import EventCard from '../components/Cards/EventCard'
-import { getAllEvents } from '../library/api'
+import { sanityFetch } from '../library/providers/sanitycms'
 import PageHeader from '../components/PageHeader'
-import type { FormattedEvent } from '../library/providers/eventbrite'
+import type { SanityFormattedEvent } from '../library/providers/sanitycms'
 
-export default function Events({ events }: { events: FormattedEvent[] }) {
+interface EventsProps {
+  eventData: SanityFormattedEvent[]
+}
+
+export default function Events({ eventData }: EventsProps) {
   return (
     <Layout
       metaTitle='Events and Meetups by Chicago Craft Club'
@@ -37,21 +42,11 @@ export default function Events({ events }: { events: FormattedEvent[] }) {
 
       <section className='container pt-0  flex flex-col justify-center'>
         <div className='flex flex-col gap-y-8 lg:gap-y-12 lg:w-3/4 mx-auto'>
-          {events && Object.keys(events).length > 0 ? (
-            Object.entries(events).map(([month, events]) => {
+          {eventData.length > 0 ? (
+            eventData.map((event) => {
               return (
                 <>
-                  <h2 className='text-center text-2xl lg:text-3xl border-b-4 text-gray pb-3 lg:pb-6 font-display'>
-                    {month}
-                  </h2>
-                  {Array.isArray(events) &&
-                    events?.map((event: FormattedEvent) => {
-                      return (
-                        <>
-                          <EventCard event={event} key={event.id} />
-                        </>
-                      )
-                    })}
+                  <EventCard event={event} key={event._id} />
                 </>
               )
             })
@@ -78,13 +73,13 @@ export default function Events({ events }: { events: FormattedEvent[] }) {
   )
 }
 
-export async function getStaticProps() {
-  const data = await getAllEvents()
-
-  return {
-    props: {
-      events: data,
-    },
+export const getStaticProps = (async (context) => {
+  const eventData = await sanityFetch({
+    query: '*[_type == "event"] | order(start asc)',
     revalidate: 60,
-  }
-}
+  })
+
+  return { props: { eventData }, revalidate: 60 }
+}) satisfies GetStaticProps<{
+  eventData: SanityFormattedEvent
+}>
