@@ -8,7 +8,13 @@ export default function HumanDate({ isoDate }: { isoDate: string }) {
   const tzDate = new TZDate(isoDate, centralTimeZone)
 
   // Format the date
-  const formattedDate = format(tzDate, "MMMM d, yyyy 'at' h:mmaaaa")
+  const formattedDate = format(tzDate, 'MMMM d, yyyy')
+  const formattedTime = format(tzDate, "h:mmaa 'CT'")
 
-  return formattedDate
+  return (
+    <>
+      <p className='font-bold text-blue'>{formattedDate}</p>
+      <p className='text-gray font-bold'>{formattedTime}</p>
+    </>
+  )
 }
