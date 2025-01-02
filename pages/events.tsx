@@ -75,7 +75,7 @@ export default function Events({ eventData }: EventsProps) {
 
 export const getStaticProps = (async (context) => {
   const eventData = await sanityFetch({
-    query: '*[_type == "event"]',
+    query: '*[_type == "event"] | order(start asc)',
     revalidate: 60,
   })
 
