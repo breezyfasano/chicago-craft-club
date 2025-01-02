@@ -1,4 +1,4 @@
-import * as eventApi from './providers/eventbrite'
+import * as eventApi from './providers/manualEvents'
 
 // Event Methods
 export async function getAllEvents() {
