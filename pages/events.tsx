@@ -79,7 +79,7 @@ export const getStaticProps = (async (context) => {
     revalidate: 60,
   })
 
-  return { props: { eventData } }
+  return { props: { eventData }, revalidate: 60 }
 }) satisfies GetStaticProps<{
   eventData: SanityFormattedEvent
 }>
