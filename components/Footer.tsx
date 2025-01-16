@@ -26,7 +26,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href='https://www.instagram.com/chicagocraftingclub/'
+                href='https://www.instagram.com/chicagocraftclub/'
                 target='_blank'
                 rel='noreferrer'
               >
