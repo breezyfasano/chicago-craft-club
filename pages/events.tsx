@@ -36,7 +36,9 @@ export default function Events({ eventData }: EventsProps) {
             to see any community ran events! You can even host your own meetup
             or one-off event there.
           </p>
-          <p className='font-bold'>All of our events are free to enter :)</p>
+          <p className='font-bold'>
+            All of our events are free to enter unless otherwise stated :)
+          </p>
         </div>
       </section>
 
