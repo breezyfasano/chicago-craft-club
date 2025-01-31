@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import Link from 'next/link'
+import { Button } from '../components/Elements/Button'
 import { SnippetCard } from '../components/Cards/SnippetCard'
 import { CalloutList } from '../components/CalloutList'
 import { HomeHero } from '../components/Heroes/HomeHero'
@@ -55,22 +55,21 @@ export default function Home() {
         ]}
       />
 
-      <section className='callout bg-blue text-white'>
+      <section className='bg-blue'>
         <div className='flex flex-wrap justify-center'>
-          <div className='container'>
-            <p className='text-lg'>
-              do you have an idea for an event? interested in volunteering? have
-              a business inquiry?
+          <div className='container text-center'>
+            <p className='text-lg text-white'>
+              do you need accommodations? interested in volunteering? have a
+              business inquiry?
             </p>
-            <p className='text-lg'>
-              please contact us at{' '}
-              <Link
-                href='mailto:hello@chicagocraft.club'
-                className='hover:!text-pink'
-              >
-                hello@chicagocraft.club
-              </Link>
-            </p>
+
+            <Button
+              secondary
+              className='mx-auto mt-4 text-center'
+              link='mailto:hello@chicagocraft.club'
+            >
+              Email Us
+            </Button>
           </div>
         </div>
       </section>

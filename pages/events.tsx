@@ -44,7 +44,7 @@ export default function Events({ eventData }: EventsProps) {
 
       <section className='container pt-0  flex flex-col justify-center'>
         <div className='flex flex-col gap-y-8 lg:gap-y-12 lg:w-3/4 mx-auto'>
-          {eventData.length > 0 ? (
+          {eventData && eventData?.length > 0 ? (
             eventData.map((event) => {
               return (
                 <>
