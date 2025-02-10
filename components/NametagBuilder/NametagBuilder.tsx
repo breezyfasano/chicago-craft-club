@@ -73,7 +73,7 @@ export function NametagBuilder() {
   // Export to image
 
   const nametagElementRef = useRef<HTMLDivElement>(null)
-  const onButtonClick = useCallback(
+  const downloadNametag = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.preventDefault()
       if (nametagElementRef.current === null) {
@@ -92,6 +92,20 @@ export function NametagBuilder() {
         })
     },
     [nametagElementRef]
+  )
+
+  const handleThemeChange = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault()
+      const indexOfCurrentTheme = themes.indexOf(theme)
+
+      if (indexOfCurrentTheme + 1 === themes.length) {
+        setTheme(themes[0])
+      } else {
+        setTheme(themes[indexOfCurrentTheme + 1])
+      }
+    },
+    [theme]
   )
 
   if (!isLoaded) {
@@ -135,8 +149,16 @@ export function NametagBuilder() {
               {...register('promptAnswer')}
               className='p-4'
             />
+            <label htmlFor='themeField'>Theme</label>
+            <button
+              name='themeField'
+              className='button'
+              onClick={handleThemeChange}
+            >
+              Change theme
+            </button>
 
-            <button className='button primary' onClick={onButtonClick}>
+            <button className='button primary' onClick={downloadNametag}>
               Download Nametag
             </button>
           </form>

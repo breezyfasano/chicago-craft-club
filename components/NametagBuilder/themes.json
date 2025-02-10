@@ -15,5 +15,22 @@
       "maxSize": 54,
       "color": "#000000"
     }
+  },
+  {
+    "name": "Another One",
+    "backgroundColor": "#000000",
+    "image": "frame-2.png",
+    "baseText": {
+      "fontFamily": "\"Libre Franklin\", sans-serif",
+      "minSize": 18,
+      "maxSize": 24,
+      "color": "#ff6699"
+    },
+    "nameText": {
+      "fontFamily": "\"Dela Gothic One\", serif",
+      "minSize": 24,
+      "maxSize": 54,
+      "color": "#ffffff"
+    }
   }
 ]
