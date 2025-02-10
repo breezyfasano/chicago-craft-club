@@ -14,6 +14,7 @@ import themes from './themes.json'
 
 export function NametagBuilder() {
   const [theme, setTheme] = useState(themes[0])
+  const [isLoaded, setIsLoaded] = useState(false)
   const nameElementRef = useRef(null)
   const promptElementRef = useRef(null)
 
@@ -65,6 +66,10 @@ export function NametagBuilder() {
     adjustTextSize(promptElementRef, baseText)
   }, [promptElementRef, promptAnswerValue, baseText])
 
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
   // Export to image
 
   const nametagElementRef = useRef<HTMLDivElement>(null)
@@ -88,11 +93,22 @@ export function NametagBuilder() {
     },
     [nametagElementRef]
   )
+
+  if (!isLoaded) {
+    return (
+      <div className='container'>
+        <div className='h-[635px]'>
+          <p className='text-5xl text-center font-bold'>Loading...</p>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className='container'>
       <div className='flex flex-col gap-12 lg:flex-row-reverse w-full justify-center'>
         <div>
-          <form className='flex flex-col gap-4 w-full lg:w-unset max-w-[350px] mx-auto md:m-0 '>
+          <form className='flex flex-col gap-4 w-full lg:w-unset max-w-[350px] mx-auto lg:m-0 '>
             <input
               type='text'
               id='firstName'
@@ -123,7 +139,7 @@ export function NametagBuilder() {
         </div>
         <div>
           <div
-            className={`shadow-lg aspect-[17/27] w-[400px] h-auto mx-auto lg:mx-unset`}
+            className={`shadow-lg aspect-[17/27] w-full max-w-[400px] lg:w-[400px] h-auto mx-auto lg:mx-unset`}
           >
             <div
               ref={nametagElementRef}
@@ -169,6 +185,7 @@ export function NametagBuilder() {
                 <text
                   y='500'
                   x='50%'
+                  className='font-bold'
                   style={{
                     textAnchor: 'middle',
                     fontSize: `${baseText.maxSize}px`,

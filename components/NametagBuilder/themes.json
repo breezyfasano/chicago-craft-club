@@ -10,9 +10,9 @@
       "color": "#000000"
     },
     "nameText": {
-      "fontFamily": "\"Darumadrop One\", serif",
+      "fontFamily": "\"Dela Gothic One\", serif",
       "minSize": 24,
-      "maxSize": 64,
+      "maxSize": 54,
       "color": "#000000"
     }
   }

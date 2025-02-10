@@ -70,7 +70,7 @@ li:not(.nav-link) a {
 }
 
 .button {
-  @apply bg-pink inline-block py-4 px-8 rounded-full no-underline font-bold hover:font-black;
+  @apply bg-pink inline-block py-4 px-8 rounded-full no-underline font-bold hover:bg-yellow;
   box-shadow: 5px 5px 0px black;
   border: 2px solid black;
   &:active {
