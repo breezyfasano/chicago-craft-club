@@ -180,6 +180,7 @@ export function NametagBuilder() {
                 width='400'
                 height='634'
                 className='absolute left-0'
+                decoding='sync'
               />
               <svg viewBox='0 0 400 635' xmlns='http://www.w3.org/2000/svg'>
                 <text
