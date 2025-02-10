@@ -1,5 +1,11 @@
 'use client'
-import { useRef, useEffect, useCallback, useState } from 'react'
+import {
+  useRef,
+  useEffect,
+  useCallback,
+  useState,
+  MutableRefObject,
+} from 'react'
 import { useForm } from 'react-hook-form'
 import { Theme } from './types'
 import { toPng } from 'html-to-image'
@@ -25,7 +31,10 @@ export function NametagBuilder() {
   const pronounsValue = watch('pronouns')
   const promptAnswerValue = watch('promptAnswer')
 
-  const adjustTextSize = (elementRef, font) => {
+  const adjustTextSize = (
+    elementRef: MutableRefObject<SVGTextElement | null>,
+    font: { fontFamily?: string; minSize: any; maxSize: any; color?: string }
+  ) => {
     const { maxSize, minSize } = font
     let currentFontSize = maxSize
     const textElement = elementRef.current
@@ -50,17 +59,17 @@ export function NametagBuilder() {
 
   useEffect(() => {
     adjustTextSize(nameElementRef, nameText)
-  }, [nameElementRef, firstNameValue])
+  }, [nameElementRef, firstNameValue, nameText])
 
   useEffect(() => {
     adjustTextSize(promptElementRef, baseText)
-  }, [promptElementRef, promptAnswerValue])
+  }, [promptElementRef, promptAnswerValue, baseText])
 
   // Export to image
 
   const nametagElementRef = useRef<HTMLDivElement>(null)
   const onButtonClick = useCallback(
-    (e) => {
+    (e: React.MouseEvent<HTMLButtonElement>) => {
       e.preventDefault()
       if (nametagElementRef.current === null) {
         return
