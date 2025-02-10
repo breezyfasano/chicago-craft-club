@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Default",
+    "backgroundColor": "#ffffff",
+    "image": "frame-1.png",
+    "baseText": {
+      "fontFamily": "\"Libre Franklin\", sans-serif",
+      "minSize": 18,
+      "maxSize": 24,
+      "color": "#000000"
+    },
+    "nameText": {
+      "fontFamily": "\"Darumadrop One\", serif",
+      "minSize": 24,
+      "maxSize": 64,
+      "color": "#000000"
+    }
+  }
+]

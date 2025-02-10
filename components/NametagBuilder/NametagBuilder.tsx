@@ -1,20 +1,17 @@
 'use client'
-import { useRef, useEffect, useCallback } from 'react'
+import { useRef, useEffect, useCallback, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Theme } from './types'
 import { toPng } from 'html-to-image'
 import Image from 'next/image'
-import frame from './frame-2.png'
+import themes from './themes.json'
 
-interface NametagBuilderProps {
-  theme?: Theme
-}
-
-export function NametagBuilder({ theme }: NametagBuilderProps) {
+export function NametagBuilder() {
+  const [theme, setTheme] = useState(themes[0])
   const nameElementRef = useRef(null)
   const promptElementRef = useRef(null)
-  const baseFontRef = useRef(32)
-  const baseFont = baseFontRef.current
+
+  const { baseText, nameText } = theme
 
   const { register, watch } = useForm({
     defaultValues: {
@@ -28,31 +25,35 @@ export function NametagBuilder({ theme }: NametagBuilderProps) {
   const pronounsValue = watch('pronouns')
   const promptAnswerValue = watch('promptAnswer')
 
-  const adjustTextSize = (maxFontSize = 64, elementRef) => {
-    let currentFontSize = maxFontSize
+  const adjustTextSize = (elementRef, font) => {
+    const { maxSize, minSize } = font
+    let currentFontSize = maxSize
     const textElement = elementRef.current
 
     if (!textElement) return
-    3
+
     if (
       textElement.getComputedTextLength() < 352 &&
-      currentFontSize >= maxFontSize
+      currentFontSize <= maxSize
     ) {
-      textElement.style.fontSize = `${maxFontSize}px`
+      textElement.style.fontSize = `${currentFontSize}px`
     }
 
-    while (textElement.getComputedTextLength() > 352 && currentFontSize >= 24) {
+    while (
+      textElement.getComputedTextLength() > 352 &&
+      currentFontSize >= minSize
+    ) {
       currentFontSize -= 2
       textElement.style.fontSize = `${currentFontSize}px`
     }
   }
 
   useEffect(() => {
-    adjustTextSize(64, nameElementRef)
+    adjustTextSize(nameElementRef, nameText)
   }, [nameElementRef, firstNameValue])
 
   useEffect(() => {
-    adjustTextSize(baseFontRef.current, promptElementRef)
+    adjustTextSize(promptElementRef, baseText)
   }, [promptElementRef, promptAnswerValue])
 
   // Export to image
@@ -113,18 +114,17 @@ export function NametagBuilder({ theme }: NametagBuilderProps) {
         </div>
         <div>
           <div
-            className={`shadow aspect-[17/27] w-[400px] h-auto mx-auto lg:mx-unset`}
+            className={`shadow-lg aspect-[17/27] w-[400px] h-auto mx-auto lg:mx-unset`}
           >
             <div
               ref={nametagElementRef}
-              className={`relative ${
-                theme?.backgroundColor
-                  ? `bg-${theme.backgroundColor}`
-                  : 'bg-white'
-              }`}
+              className={`relative`}
+              style={{
+                backgroundColor: theme.backgroundColor,
+              }}
             >
               <Image
-                src={frame}
+                src={`/img/nametag-themes/${theme.image}`}
                 alt=''
                 width='400'
                 height='634'
@@ -136,10 +136,10 @@ export function NametagBuilder({ theme }: NametagBuilderProps) {
                   y='250'
                   x='50%'
                   style={{
-                    fill: 'black',
-                    fontSize: 64,
+                    fontSize: nameText.maxSize,
                     textAnchor: 'middle',
-                    fontFamily: '"Bagel Fat One", serif',
+                    fontFamily: nameText.fontFamily,
+                    fill: nameText.color,
                   }}
                 >
                   {firstNameValue}
@@ -149,7 +149,9 @@ export function NametagBuilder({ theme }: NametagBuilderProps) {
                   x='50%'
                   style={{
                     textAnchor: 'middle',
-                    fontSize: `${baseFont}px`,
+                    fontSize: `${baseText.maxSize}px`,
+                    fontFamily: nameText.fontFamily,
+                    fill: nameText.color,
                   }}
                 >
                   {pronounsValue}
@@ -160,7 +162,9 @@ export function NametagBuilder({ theme }: NametagBuilderProps) {
                   x='50%'
                   style={{
                     textAnchor: 'middle',
-                    fontSize: `${baseFont}px`,
+                    fontSize: `${baseText.maxSize}px`,
+                    fontFamily: baseText.fontFamily,
+                    fill: baseText.color,
                   }}
                 >
                   my favorite craft(s):
@@ -172,7 +176,9 @@ export function NametagBuilder({ theme }: NametagBuilderProps) {
                   className='whitespace-pre'
                   style={{
                     textAnchor: 'middle',
-                    fontSize: `${baseFont}px`,
+                    fontSize: `${baseText.maxSize}px`,
+                    fontFamily: baseText.fontFamily,
+                    fill: baseText.color,
                   }}
                 >
                   {promptAnswerValue}
