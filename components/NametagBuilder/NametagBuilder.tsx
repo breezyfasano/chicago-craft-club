@@ -109,6 +109,7 @@ export function NametagBuilder() {
       <div className='flex flex-col gap-12 lg:flex-row-reverse w-full justify-center'>
         <div>
           <form className='flex flex-col gap-4 w-full lg:w-unset max-w-[350px] mx-auto lg:m-0 '>
+            <label htmlFor='firstName'>Name</label>
             <input
               type='text'
               id='firstName'
@@ -117,6 +118,7 @@ export function NametagBuilder() {
               {...register('firstName')}
               className='p-4'
             />
+            <label htmlFor='pronouns'>Pronouns</label>
             <input
               type='text'
               id='pronouns'
@@ -124,6 +126,7 @@ export function NametagBuilder() {
               {...register('pronouns')}
               className='p-4'
             />
+            <label htmlFor='promptAnswer'>Prompt Answer</label>
             <input
               type='text'
               id='promptAnswer'
@@ -132,6 +135,7 @@ export function NametagBuilder() {
               {...register('promptAnswer')}
               className='p-4'
             />
+
             <button className='button primary' onClick={onButtonClick}>
               Download Nametag
             </button>
