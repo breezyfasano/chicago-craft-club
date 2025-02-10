@@ -82,19 +82,21 @@ export function NametagBuilder({ theme }: NametagBuilderProps) {
     <div className='container'>
       <div className='flex flex-col gap-12 lg:flex-row-reverse w-full justify-center'>
         <div>
-          <form className='flex flex-col gap-4 w-full lg:w-unset max-w-[350px] mx-auto md:m-0'>
+          <form className='flex flex-col gap-4 w-full lg:w-unset max-w-[350px] mx-auto md:m-0 '>
             <input
               type='text'
               id='firstName'
               placeholder='First Name'
               maxLength={20}
               {...register('firstName')}
+              className='p-4'
             />
             <input
               type='text'
               id='pronouns'
               placeholder='Pronouns'
               {...register('pronouns')}
+              className='p-4'
             />
             <input
               type='text'
@@ -102,6 +104,7 @@ export function NametagBuilder({ theme }: NametagBuilderProps) {
               placeholder='Prompt answer'
               maxLength={30}
               {...register('promptAnswer')}
+              className='p-4'
             />
             <button className='button primary' onClick={onButtonClick}>
               Download Nametag
@@ -117,14 +120,14 @@ export function NametagBuilder({ theme }: NametagBuilderProps) {
               className={`relative ${
                 theme?.backgroundColor
                   ? `bg-${theme.backgroundColor}`
-                  : 'bg-blue'
+                  : 'bg-white'
               }`}
             >
               <Image
                 src={frame}
                 alt=''
                 width='400'
-                height='635'
+                height='634'
                 className='absolute left-0'
               />
               <svg viewBox='0 0 400 635' xmlns='http://www.w3.org/2000/svg'>
@@ -160,7 +163,7 @@ export function NametagBuilder({ theme }: NametagBuilderProps) {
                     fontSize: `${baseFont}px`,
                   }}
                 >
-                  My favorite craft is
+                  my favorite craft(s):
                 </text>
                 <text
                   ref={promptElementRef}
