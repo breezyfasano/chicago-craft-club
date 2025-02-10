@@ -12,9 +12,26 @@ import { toPng } from 'html-to-image'
 import Image from 'next/image'
 import themes from './themes.json'
 
+const buildPng = async (element: HTMLElement) => {
+  let dataUrl = ''
+  const minDataLength = 2000000
+  let i = 0
+  const maxAttempts = 10
+
+  while (dataUrl.length < minDataLength && i < maxAttempts) {
+    if (element) {
+      dataUrl = await toPng(element)
+    }
+    i += 1
+  }
+
+  return dataUrl
+}
+
 export function NametagBuilder() {
   const [theme, setTheme] = useState(themes[0])
   const [isLoaded, setIsLoaded] = useState(false)
+  const [downloadingImage, setDownloadingImage] = useState(false)
   const nameElementRef = useRef(null)
   const promptElementRef = useRef(null)
 
@@ -80,12 +97,17 @@ export function NametagBuilder() {
         return
       }
 
-      toPng(nametagElementRef.current, { cacheBust: true })
+      setDownloadingImage(true)
+
+      buildPng(nametagElementRef.current)
         .then((dataUrl) => {
           const link = document.createElement('a')
           link.download = 'craft-club-nametag.png'
           link.href = dataUrl
           link.click()
+        })
+        .finally(() => {
+          setDownloadingImage(false)
         })
         .catch((err) => {
           console.log(err)
@@ -159,7 +181,7 @@ export function NametagBuilder() {
             </button>
 
             <button className='button primary' onClick={downloadNametag}>
-              Download Nametag
+              {downloadingImage ? 'Please wait...' : 'Download Nametag'}
             </button>
           </form>
         </div>
