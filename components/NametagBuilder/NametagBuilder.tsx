@@ -12,19 +12,36 @@ import { toPng } from 'html-to-image'
 import Image from 'next/image'
 import themes from './themes.json'
 
-const buildPng = async (element: HTMLElement) => {
+const buildPng = async (contentToPrint: HTMLDivElement) => {
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
   let dataUrl = ''
-  const minDataLength = 2000000
   let i = 0
-  const maxAttempts = 10
-
-  while (dataUrl.length < minDataLength && i < maxAttempts) {
-    if (element) {
-      dataUrl = await toPng(element)
-    }
-    i += 1
+  let maxAttempts
+  if (isSafari) {
+    maxAttempts = 5
+  } else {
+    maxAttempts = 1
   }
+  let cycle = []
+  let repeat = true
 
+  while (repeat && i < maxAttempts) {
+    dataUrl = await toPng(contentToPrint as HTMLDivElement, {
+      fetchRequestInit: {
+        cache: 'no-cache',
+      },
+      skipAutoScale: true,
+      includeQueryParams: true,
+
+      pixelRatio: isSafari ? 1 : 3,
+      quality: 1,
+    })
+    i += 1
+    cycle[i] = dataUrl.length
+
+    if (dataUrl.length > cycle[i - 1]) repeat = false
+  }
+  //console.log('safari:' + isSafari + '_repeat_need_' + i);
   return dataUrl
 }
 
