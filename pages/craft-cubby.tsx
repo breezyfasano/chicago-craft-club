@@ -18,17 +18,29 @@ export default function CraftCubby() {
         </p>
       </section>
       <div className='w-full flex justify-center'>
-        <div className='w-full md:w-1/4'>
+        <div className='w-full md:w-2/4'>
           <Image
-            src='/img/IMG_6612.JPG'
-            width={616}
-            height={462}
+            src='/img/craft-cubby.jpeg'
+            width={716}
+            height={562}
             alt=''
             className='block mx-auto'
           />
         </div>
       </div>
-      <section className='container pb-0'>
+      <section className='container'>
+        <div className='bg-blue rounded-full p-12 mx-auto'>
+          <span className='block text-4xl text-center font-bold text-white'>
+            ✨ Cubby Donations are currently CLOSED ✨
+          </span>
+          <span className='block text-xl text-center font-bold text-pink'>
+            The cubby is currently full and not accepting new donations at this
+            time. Please come check out all of the awesome supplies we have FREE
+            for the taking!
+          </span>
+        </div>
+      </section>
+      {/* <section className='container pb-0'>
         <h2>Rules and Terms</h2>
         <ul>
           <ul>
@@ -58,7 +70,7 @@ export default function CraftCubby() {
             <li>We have the right to add or edit these terms any time.</li>
           </ul>
         </ul>
-      </section>
+      </section> */}
       <section className='container flex w-full pb-0'>
         <div className='w-full'>
           <address className='not-italic'>
@@ -79,7 +91,7 @@ export default function CraftCubby() {
           <p>If you need help, talk to Mary or Laura!</p>
         </div>
       </section>
-      <section className='container pb-0'>
+      {/* <section className='container pb-0'>
         <h2>Making a Donation</h2>
         <p>
           You can drop off any donations on site at Second Shift! See our drop
@@ -133,22 +145,25 @@ export default function CraftCubby() {
             <li>Anything else crafty and fun!</li>
           </ul>
         </div>
-      </section>
+      </section> */}
 
       <section className='container pb-0'>
         <h2>Browse the Craft Cubby</h2>
         <h3 className='mb-4'>Browsing Hours</h3>
         <ul>
-          <li>First & Third Fridays of every month, 9am to 4pm.</li>
+          <li>
+            During Second Shift business hours;{' '}
+            <strong>Monday through Friday, 9am through 5pm.</strong>
+          </li>
           <li>
             If for any reason the door is locked, ring the doorbell and we will
             let you in.
           </li>
-          <li>
+          {/* <li>
             You can also browse during craft club events at Second Shift. Keep
             an eye on our <Link href='/events'>Events page</Link> for a list of
             our upcoming events.
-          </li>
+          </li> */}
           <li>
             Want more access to the cubby? Members of Second Shift coworking get
             unlimited access to the Craft Cubby as a perk!{' '}
@@ -180,14 +195,14 @@ export default function CraftCubby() {
           it possible for us to provide so many more free supplies to our
           community, so thank you SO much.
         </p>
-        <h3>
+        {/* <h3>
           How can I see what’s in the cubby before making my way out to Second
           Shift?
         </h3>
         <p>
           Join us on Geneva and check out the Craft Cubby channel to see the
           latest updates on our inventory before each pick-up day.
-        </p>
+        </p> */}
         <h3>I need an accessibility accommodation - is this possible?</h3>
         <p>
           Of course! Please email us at{' '}
