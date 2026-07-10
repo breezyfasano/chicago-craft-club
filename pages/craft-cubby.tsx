@@ -28,12 +28,12 @@ export default function CraftCubby() {
           />
         </div>
       </div>
-      <section className='container'>
-        <div className='bg-blue rounded-full p-12 mx-auto'>
-          <span className='block text-4xl text-center font-bold text-white'>
+      <section className='container pb-0 '>
+        <div className='bg-blue rounded-3xl p-6 lg:p-12 mx-auto'>
+          <span className='block text-2xl lg:text-4xl text-center font-bold pb-1 text-white'>
             ✨ Cubby Donations are currently CLOSED ✨
           </span>
-          <span className='block text-xl text-center font-bold text-pink'>
+          <span className='block text-lg lg:text-xl text-center font-bold leading-tight text-pink'>
             The cubby is currently full and not accepting new donations at this
             time. Please come check out all of the awesome supplies we have FREE
             for the taking!
