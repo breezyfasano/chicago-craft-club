@@ -150,7 +150,7 @@ export default function CraftCubby() {
       <section className='container pb-0'>
         <h2>Browse the Craft Cubby</h2>
         <h3 className='mb-4'>Browsing Hours</h3>
-        <ul>
+        <ul className='px-4'>
           <li>
             During Second Shift business hours;{' '}
             <strong>Monday through Friday, 9am through 5pm.</strong>
