@@ -67,16 +67,6 @@ li:not(.nav-link) a {
   }
 }
 
-.button {
-  @apply bg-pink inline-block py-4 px-8 rounded-full no-underline font-bold hover:font-black;
-  box-shadow: 5px 5px 0px black;
-  border: 2px solid black;
-  &:active {
-    box-shadow: 0px 0px 0px black;
-    transform: translateY(5px);
-  }
-}
-
 .logoContainer {
   width: 500px;
   padding: 3rem;
@@ -93,12 +83,18 @@ li:not(.nav-link) a {
   }
 }
 
-.callout {
-  @apply block font-semibold text-2xl text-center;
-}
-
 .socialsList {
   @apply flex list-none p-0 w-full mt-6 lg:mt-0 space-x-8 lg:space-x-5;
+}
+
+.button {
+  @apply bg-pink inline-block py-4 px-8 rounded-full no-underline font-bold;
+  box-shadow: 5px 5px 0px black;
+  border: 2px solid black;
+  &:active {
+    box-shadow: 0px 0px 0px black;
+    transform: translateY(5px);
+  }
 }
 
 .eventCard {

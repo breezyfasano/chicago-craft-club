@@ -1,4 +1,5 @@
 import type { Event } from '../types'
+import { Button } from '../Elements/Button'
 import HumanDate from '../../components/HumanDate'
 
 type EventCardProps = {
@@ -27,14 +28,9 @@ export default function EventCard({ event }: EventCardProps) {
         <p>{event.summary}</p>
       </div>
       <div className='text-center'>
-        <a
-          href={event.url}
-          target='_blank'
-          rel='noreferrer'
-          className='button hover:font-bold mt-4'
-        >
+        <Button secondary className='mx-auto' newTab link={event.url}>
           View Details
-        </a>
+        </Button>
       </div>
     </article>
   )
